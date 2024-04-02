@@ -1,0 +1,309 @@
+/* Recommended CSS reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+  nav {
+    float: right;
+}
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0px;
+}
+#myWorks {
+  border-bottom: 2px solid #3081D0;
+}
+#myWorks a{
+  color: #3081D0;
+}
+.effect {
+    font: bold 2em Helvetica, Arial, sans-serif;
+    padding: 20px;
+    position: relative;
+    text-decoration: none;
+    color: #3081D0;
+}
+.effect::after {
+    content: "";
+     position: absolute;
+      bottom: -3px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: #3081D0;
+      transition: width 0.3s ease, left 0.3s ease;
+}
+.effect:hover::after{
+    
+    width: 100%;
+    left: 0;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+.container {
+  text-align: center;
+  width: auto;
+}
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    width: 401px;
+    height: 550px;
+    padding-top: 1rem;
+    /* background-color: #eb8d8d; */
+    /* background-color: #9B8EC4; */
+    border-radius: 30px;
+    align-items: center;
+    img {
+      padding: 1rem 0;
+      display: flex;
+      width: 60%;
+      justify-content: center;
+      cursor: pointer;
+    }
+    background-image: linear-gradient(#eb8d8d, #9b8ec4);
+  }
+  body {
+    font-family: "Roboto", sans-serif;
+  
+    color: #ffffff;
+    padding-top: 2 rem;
+    
+    justify-content: center;
+    background-color: #d3dedc;
+  }
+  .Range {
+    width: 15rem;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  section {
+    width: 261px;
+    height: 25px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background-image: url("img/waveform.webp");
+    /* background-repeat: no-repeat; */
+  }
+  
+  .controls {
+    width: 380px;
+    display: flex;
+    justify-content: space-around;
+  
+    img {
+      width: 100%;
+    }
+  
+    .play-button {
+      width: 40px;
+      transition: 1s;
+      background-color: transparent;
+    }
+    .pause-button {
+      width: 40px;
+      transition: 1s;
+      background-color: transparent;
+    }
+  
+    .inactive {
+      display: none;
+    }
+    button {
+      appearance: none;
+      background-color: transparent;
+    }
+  
+    div {
+      display: flex;
+    }
+    .mid-controls {
+      gap: 1rem;
+    }
+  }
+  
+  /*Reflection*/
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .big-img-tag {
+    display: flex;
+    justify-content: center;
+  }
+  .image-tag {
+    padding-right: 0.5rem;
+    text-align: center;
+  }
+  main {
+    max-width: 1100px;
+    font: normal 1.5rem Verdana;
+    /* display: flex; */
+  }
+  
+  figcaption {
+    text-align: center;
+    padding: 1rem;
+  }
+  .reflection {
+    background-color: #04e0d9;
+    text-align: center;
+    padding: 1rem;
+    font: bold 1rem Verdana;
+    border-radius: 20px;
+  }
+  h1 {
+    font: bold 3em "Lucida Console", sans-serif; 
+    padding-top: 22px;
+    text-align: center;
+    
+  }
+  h2 {
+    padding: 1rem 0;
+    text-align: center;
+  }
+  h4 {
+    text-align: center;
+    padding: 3rem 0;
+    border-bottom: solid 0.3ch #000000;
+  }
+  
+  /* range styles*/
+  input[type="range"] {
+    /* height: 26px; */
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 261px;
+  }
+  input[type="range"]:focus {
+    outline: none;
+  }
+  input[type="range"]::-webkit-slider-runnable-track {
+    width: 261px;
+    height: 3px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: #ffffff;
+    border-radius: 0px;
+    border: 0px solid #010101;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000031;
+    border: 0px solid #00001e;
+    height: 20px;
+    width: 20px;
+    border-radius: 13px;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8.5px;
+  }
+  input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: #ffffff;
+  }
+  input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: #ffffff;
+    border-radius: 0px;
+    border: 0px solid #010101;
+  }
+  input[type="range"]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000031;
+    border: 0px solid #00001e;
+    height: 20px;
+    width: 20px;
+    border-radius: 13px;
+    background: #ffffff;
+    cursor: pointer;
+  }
+  input[type="range"]::-ms-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type="range"]::-ms-fill-lower {
+    background: #ffffff;
+    border: 0px solid #010101;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px #000000;
+  }
+  input[type="range"]::-ms-fill-upper {
+    background: #ffffff;
+    border: 0px solid #010101;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px #000000;
+  }
+  input[type="range"]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 0px #000031;
+    border: 0px solid #00001e;
+    height: 20px;
+    width: 20px;
+    border-radius: 13px;
+    background: #ffffff;
+    cursor: pointer;
+  }
+  input[type="range"]:focus::-ms-fill-lower {
+    background: #ffffff;
+  }
+  input[type="range"]:focus::-ms-fill-upper {
+    background: #ffffff;
+  }
+  
+  /* --- */
+  
+  @media screen and (max-width: 800px) {
+    .row-1 {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .row-2 {
+      flex-wrap: wrap;
+    }
+  
+    .big-img-tag {
+      flex-wrap: wrap;
+    }
+  
+    main {
+      font: normal 1.25rem Verdana;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    main {
+      font: normal 0.75rem Verdana;
+    }
+  }
+  
+  /* Citations: https://chat.openai.com/share/21f34175-0d65-4d5d-94c1-4f47356c320c 
+  https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/setProperty
+  */
+  

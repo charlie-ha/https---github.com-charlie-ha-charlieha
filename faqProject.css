@@ -1,0 +1,239 @@
+/* Recommended CSS reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+  h1 {
+    font: bold 3em "Lucida Console", sans-serif; 
+    padding-top: 22px;
+    text-align: center;
+    color: #3081D0;
+  }
+  h2 {
+    padding: 1rem 0;
+    text-align: center;
+  }
+  nav {
+    float: right;
+}
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0px;
+}
+
+#myWorks {
+  border-bottom: 2px solid #3081D0;
+}
+#myWorks a{
+  color: #3081D0;
+}
+.effect {
+    font: bold 2em Helvetica, Arial, sans-serif;
+    padding: 20px;
+    position: relative;
+    text-decoration: none;
+    color: #3081D0;
+}
+.effect::after {
+    content: "";
+     position: absolute;
+      bottom: -3px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: #3081D0;
+      transition: width 0.3s ease, left 0.3s ease;
+}
+.effect:hover::after{
+    
+    width: 100%;
+    left: 0;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+.charlie a{
+  color: #3081D0;
+}
+.charlie{
+  padding-bottom: 1rem;
+}
+.container {
+  text-align: center;
+  width: auto;
+  border-bottom: 0.25rem solid #3081D0;
+}
+  body {
+    padding-top: 4ch;
+    font: normal 1rem Verdana;
+    
+    background-image: url("img/chessBackground.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #50727b;
+    justify-content: center;
+  }
+  
+  main {
+    max-width: 1100px;
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 80%;
+    border-radius: 30px;
+    padding: 2ch;
+    margin: 0 auto;
+  }
+  h1 {
+    text-align: center;
+  }
+  h2 {
+    text-align: start;
+  }
+  p {
+    text-align: start;
+  }
+  .btn{
+    border-radius: 20px;
+    padding: 1ch;
+  
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.5ch solid #7c99ac;
+  }
+  .question-pair {
+    flex-grow: 1;
+  }
+  button:hover {
+    background-color: #7c99ac;
+    transition: 0.6s;
+    cursor: pointer;
+    .bottom-pawn {
+      opacity: 0;
+    }
+  }
+  
+  .button-active {
+    background-color: #7c99ac;
+  }
+  
+  main div {
+    /* display: flex; */
+    padding: 2ch;
+  
+    justify-content: space-between;
+    p {
+      width: 80%;
+      padding-top: 1ch;
+      height: 0;
+      overflow: hidden;
+      transition: 0.6s;
+    }
+    .question-pair {
+      display: block;
+    }
+  
+    .pawn-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 8ch;
+    }
+    .top-pawn {
+      position: absolute;
+      width: 8ch;
+      transition: 0.6s;
+    }
+    .bottom-pawn {
+      position: absolute;
+      width: 8ch;
+      transition: 0.6s;
+    }
+  }
+  .open-text {
+    height: 5rem;
+  }
+  .opacity-image {
+    opacity: 0;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2ch;
+    justify-content: center;
+  }
+  
+  .row-left {
+    /* display: flex; */
+    gap: 1ch;
+  }
+  
+  .row-right {
+    /* display: flex; */
+    gap: 1ch;
+  }
+  
+  .big-img-tag {
+    display: flex;
+  }
+  article {
+    max-width: 1100px;
+    font: normal 1rem Verdana;
+    /* display: flex; */
+  }
+  
+  figcaption {
+    text-align: center;
+    padding: 0.5ch;
+  }
+  .reflection {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 1ch;
+    font: bold 1rem Verdana;
+    border-radius: 20px;
+  }
+  /* --- */
+  
+  @media screen and (max-width: 800px) {
+    .row-left {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .row-right {
+      flex-wrap: wrap;
+    }
+  
+    .big-img-tag {
+      flex-wrap: wrap;
+    }
+  
+    article {
+      font: normal 1.25rem Verdana;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    article {
+      font: normal 0.75rem Verdana;
+    }
+  }
+  
+  /*citation https://chat.openai.com/share/576948dd-b62a-49ff-a735-b69096b8e634 */
+  

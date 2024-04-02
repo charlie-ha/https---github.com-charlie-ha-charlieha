@@ -1,0 +1,179 @@
+<html>
+<head>
+	<title>Charlie Ha's Portfolio</title>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+	<style>
+			
+		#myWorks {
+			border-bottom: 2px solid #3081D0;
+		}
+		#myWorks a{
+			color: #3081D0;
+		}
+		
+		
+		
+		.myWorks-nav {
+			width: 850px;
+			align-items: center;
+			display: flex;
+   			justify-content: center;
+		}
+		.myWorks-nav ul {
+			list-style-type: none;
+   			margin: 0px;
+			
+		}
+		.myWorks-nav ul li{
+			background-color: rgb(77,106,136,0.6);
+
+			border-radius: 20px;
+			color: white;
+			transition: all 1s ease;
+
+		}
+		
+		.myWorks-nav ul li:hover {
+			background-color: rgba(53, 55, 75, 1.0);
+		}
+		
+		p {
+			height: 2.5rem;
+			overflow: hidden;
+			transition: 0.6s;
+		}
+		.open-text{
+			height: 0;
+		}
+		.image {
+			width: 100%;
+			height: 500px; 
+			background-size: cover;
+			background-position: center;
+			border-radius: 20px 20px 0 0; 
+			transition: transform 0.5s ease; 
+		}
+		.music-player {
+			background-image: url("img/bandCover.webp");
+		}
+		.faq {
+			background-image: url("img/faqCover.png");
+			width: 600px;
+		}
+		.pulley-tower{
+			background-image: url("img/IMS319_Spring2024_CharlieHa_PulleyTowerTextured10.png");
+		}
+		.food-cart{
+			background-image: url("img/CharlieHa_FoodCart1.png");
+		}
+		.food-photography {
+			background-image: url("img/cheese.jpg");
+		}
+
+		.podcast {
+			background-image: url("img/podcastLogo.png");
+		}
+
+		.fnaf {
+			background-image: url("img/FNAFanimatronicView.png");
+		}
+
+		
+		.myWorks-nav ul li:hover {
+			transform: scale(1.1);
+			p {
+				height: 4rem;
+			}
+		}
+		
+
+	</style>		
+			
+</head>
+<body>
+	
+	<header>
+		<div class="topnav">
+		<button style="font-size:4em"><a href="javascript:void(0);" class="icon" onclick="menu();"><i class="fa fa-bars"></i></a></button>
+		<nav id="navigation">
+			<ul>
+				<li class="effect"><a href="index.html">Profile</a></li>
+				<li id="myWorks" class="effect"><a href="myWorks.html">My Works</a></li>
+				
+				<li class="effect"><a href ="contact.html"> Contact </a></li>
+				
+			</ul>	
+		</nav>
+		
+	</div>
+		<h1><a href ="index.html">CHARLIE HA</a></h1>
+		
+	</header>
+	
+	
+	<article>
+	
+		
+		<div class="container">
+			<h2>My Works</h2>
+		</div>
+		<div class="myWorks-nav">
+			<ul>
+				
+				<a href ="musicPlayerProject.html"><li>
+					<div class="image music-player"></div>
+					<p>Music Player Project</p>
+					<p class="open-text">- Playable Music Player -</p>
+				</li></a>	
+				<a href ="faqProject.html"><li>
+					<div class="image faq"></div>
+					<p>FAQ Project</p>
+					<p class="open-text">- Design FAQ for Chess Club -</p>
+				</li></a>
+				
+				<a href ="pulleyTower.html"><li>
+					<div class="image pulley-tower"></div>
+					<p>Pulley Tower</p>
+					<p class="open-text">- 3D model Pulley Tower -</p>
+				</li></a>		
+				<a href ="foodCart.html"><li>
+					<div class="image food-cart"></div>
+					<p>Food Cart</p>
+					<p class="open-text">- 3D model a Food Cart -</p>
+				</li></a>
+				<a href ="fnaf.html"><li>
+					<div class="image fnaf"></div>
+					<p>Five Nights at Freddy's</p>
+					<p class="open-text">- A translation to board game -</p>
+				</li></a>	
+				<a href ="photography.html"><li>
+					<div class="image food-photography"></div>
+					<p>Food photography</p>
+					<p class="open-text">- Each layer is a story -</p>
+				</li></a>
+				<a href ="podcast.html"><li>
+					<div class="image podcast"></div>
+					<p>Podcast</p>
+					<p class="open-text">- Studying abroad experiences -</p>
+				</li></a>
+				
+				
+			</ul>
+		</div>
+		
+		
+	</article>
+	
+
+</body>
+</html>
+<!--Citations 
+"phone", fontawesome.com, https://fontawesome.com/icons/phone?f=classic&s=solid
+"envelope", fontawesome.com, https://fontawesome.com/v5/icons/envelope?f=classic&s=solid
+"How TO- Mobile Navigation Menu", w3schools, https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+
+-->
