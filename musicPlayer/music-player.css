@@ -169,6 +169,18 @@ a {
     font: bold 1rem Verdana;
     border-radius: 20px;
   }
+  .big-div-reflection {
+    display: flex;
+  }
+  .div-reflection {
+    width: 49%;
+    h3 {
+      padding: 1rem;
+    }
+    .p-reflection{
+      padding-left: 2rem;
+    }
+  }
   h1 {
     font: bold 3em "Lucida Console", sans-serif; 
     padding-top: 22px;
