@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style.css">
+  <!-- <link rel="stylesheet" href="../style.css"> -->
   <link rel="stylesheet" href="zombieVirus.css">
-  <!-- <script src="music-player.js" defer></script> -->
+  <script src="zombieVirus.js" defer></script>
   <title>Zombie Virus</title>
 
 </head>
@@ -31,10 +31,10 @@
 
   </header>
   <div class="column">
-    <h2>Horror Game Project</h2>
+    <h2>Horror Game</h2>
 
     <main>
-      <h3>Project highlight:</h3>
+
       <div class="big-div-reflection">
         <div class="div-reflection"> <!--describe project date and time -->
           <h4>
@@ -55,7 +55,7 @@
             Date:
           </h4>
           <p class="p-reflection">
-            Summer 2024
+            Summer 2024 to present.
           </p>
           <h4>
             Role:
@@ -65,15 +65,110 @@
           </p>
         </div>
       </div>
+      <h3>Project highlight:</h3>
+      <div class="big-div-project-highlight">
+        <div class="small-div-project-highlight">
+          <h4> Game Logic:</h4>
+          <p class="reflection">
+            Developed win condition and full game completion.</p>
+          <p class="reflection">
+            These are timestamps for each milestone in the game:</p>
+          <p class="reflection">
+            <button class="jump-to-button" onclick="jumpTo(206)"><span class="timestamp">3:26</span> Find House
+              key</button>
+          </p>
+          <p class="reflection">
+            <button class="jump-to-button" onclick="jumpTo(528)"><span class="timestamp">8:48</span> Find Cabin
+              key</button>
+          </p>
+          <p class="reflection">
+            <button class="jump-to-button" onclick="jumpTo(682)"><span class="timestamp">11:22</span> Collect Jerry
+              Can</button>
+          </p>
+          <p class="reflection">
+            <button class="jump-to-button" onclick="jumpTo(748)"><span class="timestamp">12:28</span> Power
+              generator</button>
+          </p>
+          <p class="reflection">
+            <button class="jump-to-button" onclick="jumpTo(804)"><span class="timestamp">13:24</span> Collect
+              vaccine</button>
+          </p>
+          <p class="reflection">
+            <button class="jump-to-button" onclick="jumpTo(895)"><span class="timestamp">14:55</span> Escape</button>
+          </p>
+          <!-- <video id="winCondition" controls width="1138" height="640" src="winCondition.mp4"></video> -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/cefcF4y8PM4?si=C_WeHgFgU5xGYv2o"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <p class="reflection">Developed loss conditions for player survival.</p>
+          <!-- <video controls width="640" height="360" src="dieLostScreen.mp4"></video> -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/A08fLDmhv4Y?si=RqqJ5ffwwVnOuGpP"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <!-- <video controls width="640" height="360" src="becomeZombieLostScreen.mp4"></video> -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/F7XuZ90_AGg?si=mfyluYrh55T2e0wy"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <p class="reflection">
+            Integrated systems for player damage, health management, and game progression.
+          </p>
+          <!-- <video controls width="640" height="360" src="zombieAttackedAnim.mp4"></video> -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/F7XuZ90_AGg?si=mfyluYrh55T2e0wy"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="small-div-project-highlight"><video src=""></video></div>
+      </div>
+
+
+      <div class="big-div-project-highlight">
+        <div class="small-div-project-highlight">
+          <h4> Asset Integration:</h4>
+          <p class="reflection">
+            Created Main menu and loading screen using <a
+              href="https://assetstore.unity.com/packages/tools/gui/easy-loading-screen-140365"> Tersein Game Easy
+              Loading Screen pack on Unity.</a>
+          </p>
+          <!-- <div class="small-div-project-highlight"><video controls width="640" height="360" src="mainMenu.mp4"></video>
+          </div> -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/blniJV2eliA?si=In6ILAzEl4vk1myX"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <p class="reflection">
+            Assembled and programmed the game using prebuilt maps, 3D models, and animations .</p>
+
+          <p class="reflection">
+            Assembled animations for zombies, fps arm and environmental interactions to achieve a cohesive game
+            experience.
+          </p>
+        </div>
+
+      </div>
+
       <div class="big-div-project-highlight">
         <div class="small-div-project-highlight">
           <h4> Gameplay Mechanics:</h4>
-          <li class="reflection">
-            Implemented a dynamic inventory system for managing resources like weapons and items.</li>
-          <li class="reflection">
-            Designed an interaction system for opening, closing, and locking doors, as well as picking up items and
+          <p class="reflection">
+            Implemented a dynamic inventory system for managing weapon and items resources.</p>
+          <!-- <video controls width="640" height="360" src="pickup.mp4"></video> -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/qSv-Givs1ZE?si=hBxte0SEm0fEXc8K"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <p class="reflection">
+            Designed an interaction system for opening, closing, locking doors, as well as picking up items and
             completing objectives.
-          </li>
+          </p>
+          <!-- <video controls width="640" height="360" src="interactionSystem.mp4"></video> -->
+          <iframe width="640" height="360" src="https://www.youtube.com/embed/UgKwLgMGCOU?si=HyPYJ6BYsjBxphkG"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <div class="small-div-project-highlight"><video src=""></video></div>
@@ -81,38 +176,34 @@
       <div class="big-div-project-highlight">
         <div class="small-div-project-highlight">
           <h4> AI Development:</h4>
-          <li class="reflection">
-            Programmed zombie AI to patrol, detect the player, and launch attacks.</li>
-          <li class="reflection">
-            Balanced zombie behaviors to create challenging and immersive gameplay.
-          </li>
+          <p class="reflection">
+            Programmed zombie AI to patrol, detect and follow the player, and attacks.</p>
+          <!-- <video controls width="640" height="360" src="zombieFollowAttacks.mp4"></video> -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/RGZlQFqc5pY?si=vC0BabTP250-8XBi"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <p class="reflection">
+            Varied zombie behaviors to create challenging and immersive gameplay.
+          </p>
         </div>
-        <div class="small-div-project-highlight"><video src=""></video></div>
+        <!-- <div class="small-div-project-highlight"><video controls width="1138" height="640"
+            src="zombieAnimationStates.mp4"></video> -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/U1Q5rtdvG-U?si=_NBrWmII3s9hhM3J"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- <video controls width="640" height="360" src="zombieFireDeath.mp4"></video> -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/nCxtLD6-_Do?si=oRWjD7c17hblXGGY"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- </div> -->
       </div>
 
-      <div class="big-div-project-highlight">
-        <div class="small-div-project-highlight">
-          <h4> Game Logic:</h4>
-          <li class="reflection">Developed win/loss conditions for player survival and game completion.</li>
-          <li class="reflection">
-            Integrated systems for player damage, health management, and game progression.
-          </li>
-        </div>
-        <div class="small-div-project-highlight"><video src=""></video></div>
-      </div>
 
-      <div class="big-div-project-highlight">
-        <div class="small-div-project-highlight">
-          <h4> Asset Integration:</h4>
-          <li class="reflection">
-            Assembled the game using prebuilt maps and 3D models, enhancing them with custom animation setups and
-            programming.</li>
-          <li class="reflection">
-            Blended animations for zombies and environmental interactions to achieve a cohesive game experience.
-          </li>
-        </div>
-        <div class="small-div-project-highlight"><video src=""></video></div>
-      </div>
+
+
 
 
     </main>
