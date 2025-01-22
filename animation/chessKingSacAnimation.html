@@ -56,6 +56,23 @@
             The character should interact with either the environment, one or more props / weapons / tools, or
             another character.
           </p>
+          <p class="p-reflection">
+            -----------
+          </p>
+          <p class="p-reflection">
+            GM Vidit (person on the left) is playing an intense game against GM Hikaru Nakamura (person on the right).
+            Then suddenly GM Vidit sacrifice... his KING.
+          </p>
+          <p class="p-reflection">
+            -----------
+          </p>
+          <p class="p-reflection">
+            Explanation: In chess, two kings are not supposed to be next
+            to each other.
+            However, it is still physically possible. GM Vidit received penalty because of that, but this unexpected
+            move made GM
+            Hikaru surprised and chess players turned this into a meme.
+          </p>
           <h4>
             Date:
           </h4>
@@ -82,9 +99,7 @@
       <div class="big-div-project-highlight">
         <div class="small-div-project-highlight">
           <h4> Reference:</h4>
-          <p class="reflection">
-            Original chess match: Vidit vs Hikaru Nakamura | Tata Steel India Blitz 2019
-          </p>
+
           <p class="reflection">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/bTS9XaoQ6mg?si=XEs3E0l9IpKBKWwa"
               title="YouTube video player" frameborder="0"
@@ -92,9 +107,24 @@
               referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </p>
           <p class="reflection">
+            Original chess match: Vidit vs Hikaru Nakamura | Tata Steel India Blitz 2019
+          </p>
+          <p class="reflection">
             <iframe width="560" height="315"
               src="https://www.youtube.com/embed/Mg9000GMj74?si=6FDuCS1uV4C5VR7Y&start=902" title="YouTube video player"
               frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </p>
+          <p class="reflection">
+            Whenever I struggle with parenting constraints to make the player move the chess pieces, I went back to this
+            video to ensure the best way to make
+            constraints, which is making a locator child of the hand, then parent constraint it with the parent group of
+            a chess piece.
+          </p>
+          <p class="reflection">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/U8JXO39aAqY?si=9KvXUy_WaZsFBd7j"
+              title="YouTube video player" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </p>
@@ -105,9 +135,7 @@
         <div class="big-div-project-highlight">
           <div class="small-div-project-highlight">
             <h4> Storyboard:</h4>
-            <p class="reflection">
 
-            </p>
             <div class="image-tag">
               <img src="../img/animation/chessKingSacStoryboard.png" alt="chessKingSacStoryboard">
               <figcaption>Storyboard 1 </figcaption>
@@ -132,28 +160,14 @@
 
         <div class="big-div-project-highlight">
           <div class="small-div-project-highlight">
-            <h4> Gameplay Mechanics:</h4>
+            <h4> Challenges:</h4>
             <p class="reflection">
-              Press keys 1, 2, 3, 4 to change to each weapons fork, Knife Block Gun, Soup Can Grenade Launcher, Melee
-              Rolling Pin .</p>
-            <!-- <video controls width="640" height="360" src="grillAWarfareChangeWeaponsEdit.mp4"></video> -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ivqDLwt9KHU?si=oUqfMUl20ou_Z4ux"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <p class="reflection">
-              Designed an interaction system for opening, closing locked doors, as well as picking up keys.
-              Completing objectives: defeat all enemies within the room before time runs out.
-            </p>
-            <!-- <video controls width="640" height="360" src="grillAWarfareInteractionSystem.mov"></video> -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/TOMGqiD66bo?si=874wV5LBYOLvQBhd"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
+              I struggled quite a bit because the constraints didn't always work as I wanted. For example, when I
+              constraint a King to the table, then to the hand for the chess piece to move, then back to the table to
+              stop it from moving, then constraint another piece to the hand, it sometimes confused the software. To fix
+              that, I added multiple locator to the hand so 1 locator can focus on 1 chess piece.</p>
 
-          <div class="small-div-project-highlight"><video src=""></video></div>
-        </div>
+          </div>
 
 
 
