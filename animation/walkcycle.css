@@ -104,7 +104,8 @@ main {
 
 figcaption {
   text-align: center;
-  padding: 1rem;
+  padding: 0.25rem;
+  margin-top: -8rem;
 }
 .reflection {
   background-color: #d3dedc;
