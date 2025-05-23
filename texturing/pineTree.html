@@ -181,18 +181,29 @@
         <div class="small-div-project-highlight">
           <h4> Reflection:</h4>
           <p class="reflection">
-            This project helps me learnt how to paint pine tree branches and the placement of pine branches more
-            organic. The pine branch is a plane with painted texture and an alpha map to make it look like a branch. I
-            also added lattices to the plane and bend them to give the branch a more organic curve.
+            This project helped me learn how to paint and place pine tree branches in a more organic and natural way.
+            Each branch is created from a flat plane with a hand-painted texture and an alpha map to simulate the
+            appearance of pine needles. To enhance realism, I applied lattice deformers to bend the planes and give the
+            branches natural curvature.
+
           </p>
           <p class="reflection">
-            Since this is my second attempt at modeling the pine tree, the tree turns out much more natural. In the
-            first
-            attempt, the pine tree has too many
-            polygons because the pine leaves are geometry and because I added too many leaves.
+            As this was my second attempt at modeling a pine tree, the results were significantly improved. In my first
+            attempt, I created pine needles using full geometry and added too many without optimization—resulting in a
+            scene with over 1 billion polygons. This made the file extremely heavy and difficult to manage.
           </p>
           <p class="reflection">
-            I found it challenging to make the details of the obsidian stand out because the rock is dark.</p>
+            I encountered several technical challenges. Initially, I made the mistake of duplicating pine needle
+            geometry without properly UV mapping or assigning materials. To fix this, I used Python scripts by Schocki
+            to apply UVs individually, which was very time-consuming. Additionally, the unoptimized scene reached 1.3 GB
+            in file size. I resolved this by deleting unnecessary construction history and applying mesh decimation,
+            reducing the file size to around 500 MB.</p>
+          <p class="reflection">
+            In the second version, I noticed unwanted shadows appearing behind and underneath the branches. I suspect
+            this was due to transparency in the alpha textures. Although I attempted to fix it using increased ray depth
+            and aiRaySwitch, the issue persisted. I plan to revisit this project to further refine the render settings
+            and improve transparency handling.
+          </p>
 
         </div>
 
