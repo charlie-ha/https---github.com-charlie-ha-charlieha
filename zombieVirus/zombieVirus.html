@@ -10,6 +10,24 @@
   <title>Zombie Virus</title>
 
 </head>
+<script src="https://www.youtube.com/iframe_api"></script><!--load ytb api to control where to jump to-->
+<script>
+  let player;
+
+  // This function is automatically called by the YouTube IFrame API once it's ready
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('winCondition');
+  }
+
+  // Custom function to jump to a specific time
+  function jumpTo(seconds) {
+    if (player && typeof player.seekTo === "function") {
+      player.seekTo(seconds, true);
+      player.playVideo();
+    }
+  }
+</script>
+
 
 <body>
   <header>
@@ -110,8 +128,9 @@
             <button class="jump-to-button" onclick="jumpTo(895)"><span class="timestamp">14:55</span> Escape</button>
           </p>
           <!-- <video id="winCondition" controls width="1138" height="640" src="winCondition.mp4"></video> -->
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/cefcF4y8PM4?si=C_WeHgFgU5xGYv2o"
-            title="YouTube video player" frameborder="0"
+          <iframe id="winCondition" width="560" height="315"
+            src="https://www.youtube.com/embed/cefcF4y8PM4?enablejsapi=1" title="YouTube video
+            player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           <p class="reflection">Developed loss conditions for player survival.</p>
