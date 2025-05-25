@@ -77,7 +77,7 @@ body {
   padding-top: 2 rem;
 
   justify-content: center;
-  background-color: #b2d8ce;
+  background-color: #f4e7e1;
 }
 
 /*Reflection*/
@@ -137,7 +137,7 @@ h1 {
 h2 {
   padding: 1rem 0;
   text-align: center;
-  color: #1fb571;
+  color: #ff9b45;
   font: bold 4rem Verdana;
 }
 h3 {
@@ -150,7 +150,7 @@ h4 {
   text-align: center;
   padding: 3rem 0;
   font: bold 2em Verdana;
-  color: #1fb571;
+  color: #ff9b45;
 }
 /*Project highlight*/
 .jump-to-button {
