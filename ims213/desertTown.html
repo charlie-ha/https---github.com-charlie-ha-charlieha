@@ -6,10 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../ims213/desertTown.css">
-  <!-- <script src="walkcycle.js" defer></script> -->
+  <script src="https://www.youtube.com/iframe_api"></script><!--load ytb api to control where to jump to-->
+  <script src="../ims213/desertTown.js" defer></script>
   <title>Desert Town</title>
 
 </head>
+
+<!-- <script>
+  let player;
+
+  // This function is automatically called by the YouTube IFrame API once it's ready
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('winCondition');
+  }
+
+  // Custom function to jump to a specific time
+  function jumpTo(seconds) {
+    if (player && typeof player.seekTo === "function") {
+      player.seekTo(seconds, true);
+      player.playVideo();
+    }
+  }
+</script> -->
 
 <body>
   <header>
@@ -83,89 +101,152 @@
           </p>
         </div>
         <div class="div-reflection">
-          <iframe width="600" height="400"
+          <!-- <iframe width="600" height="400"
             src="https://www.youtube.com/embed/zT_NA9sj4-M?autoplay=1&loop=1&playlist=zT_NA9sj4-M&disablekb=1&modestbranding=1"
             title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-          </iframe>
+          </iframe> -->
         </div>
       </div>
       <h3>Project highlight:</h3>
       <div class="big-div-project-highlight">
         <div class="small-div-project-highlight">
-          <h4> Renders from different angles:</h4>
-          <div class="big-img-tag">
-            <div class="image-tag">
-              <img src="../img/IMS319_Spring2024_CharlieHa_PulleyTowerTextured10.png"
-                alt="obsidian rendered from Mudbox">
-              <!-- <figcaption>Obsidian rendered from Mudbox </figcaption> -->
-            </div>
-            <div class="image-tag">
-              <img src="../img/IMS319_Spring2024_CharlieHa_PulleyTowerTextured13.png"
-                alt="obsidian rendered from Mudbox">
-              <!-- <figcaption>Obsidian rendered from Mudbox </figcaption> -->
-            </div>
-          </div>
-          <div class="big-img-tag">
-            <div class="image-tag">
-              <img src="../img/IMS319_Spring2024_CharlieHa_PulleyTowerTextured11.png" alt="obsidian rendered from maya">
-              <!-- <figcaption>Obsidian rendered from Maya </figcaption> -->
-            </div>
-            <div class="image-tag">
-              <img src="../img/IMS319_Spring2024_CharlieHa_PulleyTowerTextured4.png" alt="obsidian rendered from maya">
-              <!-- <figcaption>Obsidian rendered from Maya </figcaption> -->
-            </div>
-          </div>
-          <div class="big-img-tag">
-            <div class="image-tag">
-              <img src="../img/IMS319_Spring2024_CharlieHa_PulleyTowerTextured12.png" alt="obsidian rendered from maya">
-              <!-- <figcaption>Obsidian rendered from Maya </figcaption> -->
-            </div>
-            <div class="image-tag">
-              <img src="../img/IMS319_Spring2024_CharlieHa_PulleyTowerTextured8.png" alt="obsidian rendered from maya">
-              <!-- <figcaption>Obsidian rendered from Maya </figcaption> -->
-            </div>
-          </div>
-          <div class="big-img-tag">
-            <div class="image-tag">
-              <img src="../img/IMS319_Spring2024_CharlieHa_PulleyTowerTextured.png" alt="obsidian rendered from maya">
-              <!-- <figcaption>Obsidian rendered from Maya </figcaption> -->
-            </div>
-
-          </div>
-
-          <h4> Reference:</h4>
-          <div class="big-img-tag">
-
-            <div class="image-tag">
-              <img src="../img/pulleyTowerMorning.png" alt="Concept">
-              <figcaption> </figcaption>
-            </div>
-            <div class="image-tag">
-              <img src="../img/pulleyTowerNight.png" alt="Concept">
-              <figcaption> </figcaption>
-            </div>
-          </div>
-          <div class="big-img-tag">
-            <div class="image-tag">
-              <img src="../img/pulleyTowerNight2.png" alt="Concept">
-              <figcaption> </figcaption>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-
-      <div class="big-div-project-highlight">
-        <div class="small-div-project-highlight">
-          <h4> Reflection:</h4>
+          <h4> Game Flow:</h4>
           <p class="reflection">
-            This project helped me learn how to use a reference image to model, the importance of modeling the correct
-            size, and time management for time to render the project.
+            Developed win condition and full game completion.</p>
+          <p class="reflection">
+            These are timestamps for each milestone in the game:</p>
+          <p class="reflection">
+            <button class="jump-to-button" onclick="jumpTo(34)"><span class="timestamp">0:34</span> Collect Evidence
+              1</button>
           </p>
-
-
+          <p class="reflection">
+            <button class="jump-to-button" onclick="jumpTo(150)"><span class="timestamp">2:30</span> Collect Evidence
+              2</button>
+          </p>
+          <p class="reflection">
+            <button class="jump-to-button" onclick="jumpTo(252)"><span class="timestamp">4:12</span> Use $14 to
+              buy Jerry Can</button>
+          </p>
+          <p class="reflection">
+            <button class="jump-to-button" onclick="jumpTo(284)"><span class="timestamp">4:44</span> Power
+              Jerry Can to open Garage door</button>
+          </p>
+          <p class="reflection">
+            <button class="jump-to-button" onclick="jumpTo(290)"><span class="timestamp">4:50</span> Collect
+              Evidence 3</button>
+          </p>
+          <p class="reflection">
+            <button class="jump-to-button" onclick="jumpTo(307)"><span class="timestamp">5:07</span> Collect Evidence 4
+              and Win</button>
+          </p>
+          <!-- <video id="winCondition" controls width="1138" height="640" src="winCondition.mp4"></video> -->
+          <iframe id="winCondition" width="840" height="472.5"
+            src="https://www.youtube.com/embed/zT_NA9sj4-M?enablejsapi=1" title="YouTube video
+            player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
+        <h4> Game Mechanics:</h4>
+        <p class="reflection">
+          TNT traps that is triggered and explodes when the player walks near them. The trap has 1 second delay with
+          sound cue to let player know and escape.
+        </p>
+        <iframe id="TNT" width="840" height="472.5"
+          src="https://www.youtube.com/embed/zT_NA9sj4-M??autoplay=0?enablejsapi=1" title="YouTube video
+            player" frameborder="0"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p class="reflection">
+          A hit indicator that flashes the screen red when the player takes damage.
+        </p>
+        <p class="reflection">
+          Minecarts that move on rails when player jumps into the cart.
+        </p>
+        <p class="reflection">
+          Door that requires a key for the player to open. The door also has a red light that turns green when the
+          player has the Jerry Can.
+        </p>
+        <iframe id="garageDoor" width="840" height="472.5"
+          src="https://www.youtube.com/embed/zT_NA9sj4-M?enablejsapi=1&start=120" title="YouTube video
+            player" frameborder="0"
+          allow="accelerometer ; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p class="reflection">
+          A pressure plate where the player can pay $14 to buy a Jerry Can.
+        </p>
+        <iframe id="pressurePlate" width="840" height="472.5"
+          src="https://www.youtube.com/embed/zT_NA9sj4-M?enablejsapi=1&start=73" title="YouTube video
+            player" frameborder="0"
+          allow="accelerometer ; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p class="reflection">
+          Timer that counts down from 6 minutes to 0, and when it reaches 0, the game ends.
+        </p>
+        <iframe id="timeOut" width="840" height="472.5"
+          src="https://www.youtube.com/embed/zT_NA9sj4-M?enablejsapi=1&start=417" title="YouTube video
+            player" frameborder="0"
+          allow="accelerometer ; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p class="reflection">
+          When your health reaches 0, the game ends.
+        </p>
+        <iframe id="noHealth" width="840" height="472.5"
+          src="https://www.youtube.com/embed/zT_NA9sj4-M?enablejsapi=1&start=410" title="YouTube video
+            player" frameborder="0"
+          allow="accelerometer ; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p class="reflection">
+          A bell that rings when time is 3 minutes left.
+        </p>
+        <iframe id="bell" width="840" height="472.5"
+          src="https://www.youtube.com/embed/zT_NA9sj4-M?enablejsapi=1&start=185" title="YouTube video
+            player" frameborder="0"
+          allow="accelerometer ; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p class="reflection">
+          NPC free roam.
+        </p>
+        <div class="big-img-tag">
+
+          <div class="image-tag">
+            <img src="../img/pulleyTowerMorning.png" alt="Concept">
+            <figcaption> </figcaption>
+          </div>
+          <div class="image-tag">
+            <img src="../img/pulleyTowerNight.png" alt="Concept">
+            <figcaption> </figcaption>
+          </div>
+        </div>
+        <div class="big-img-tag">
+          <div class="image-tag">
+            <img src="../img/pulleyTowerNight2.png" alt="Concept">
+            <figcaption> </figcaption>
+          </div>
+        </div>
+
+      </div>
+  </div>
+
+
+  <div class="big-div-project-highlight">
+    <div class="small-div-project-highlight">
+      <h4> Reflection:</h4>
+      <p class="reflection">
+        This project helped me learn how to use a reference image to model, the importance of modeling the correct
+        size, and time management for time to render the project.
+      </p>
+      <p class="reflection">
+        This town asset was premade by <a href="https://www.fab.com/sellers/Befour%20Studios">Befour studio</a> so I use
+        them for my game, the buildings do not have interior so I
+        wanted to encourage the players to explore the outside as much as they can.
+        I had some challenges with making the pressure plate to make the Jerry Can appear. Apparently I plugged the
+        component begin overlap collider from other component to BPthirdpersoncharacter to object instead of other
+        actor. Another challenge I had was making the key visible
+
+      </p>
+
+
+    </div>
 
 
 
