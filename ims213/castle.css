@@ -115,10 +115,11 @@ figcaption {
   border-radius: 20px;
 }
 .big-div-reflection {
-  display: flex;
+  /* display: c; */
+  justify-content: center;
 }
 .div-reflection {
-  width: 49%;
+  /* width: 49%; */
   h3 {
     padding: 1rem;
   }
@@ -127,6 +128,11 @@ figcaption {
     color: #000000;
     font: normal 1.5rem Verdana;
     text-align: center;
+  }
+  .thumbnail {
+    width: 80%;
+    height: auto;
+    margin: 0 auto 0 auto;
   }
 }
 h1 {
