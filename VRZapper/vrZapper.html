@@ -7,17 +7,17 @@
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../ims213/castle.css">
   <script src="https://www.youtube.com/iframe_api"></script><!--load ytb api to control where to jump to-->
-  <!-- <script src="../ims213/desertTown.js" defer></script> -->
+
   <title>VR Zapper Game</title>
 
 </head>
 
-<!-- <script>
+<script>
   let player;
 
   // This function is automatically called by the YouTube IFrame API once it's ready
   function onYouTubeIframeAPIReady() {
-    player = new YT.Player('winCondition');
+    player = new YT.Player('zapperGame');
   }
 
   // Custom function to jump to a specific time
@@ -27,7 +27,7 @@
       player.playVideo();
     }
   }
-</script> -->
+</script>
 
 <body>
   <header>
@@ -158,22 +158,52 @@
       <h3>Project highlight:</h3>
       <div class="big-div-project-highlight">
         <div class="small-div-project-highlight">
-          <h4> Gameplay footage:</h4>
+          <!-- <h4> Gameplay footage:</h4>
 
           <iframe width="960" height="540" src="https://www.youtube.com/embed/fDOeb5BVMsY?si=fDOeb5BVMsY&vq=hd1080"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
           <p class="reflection">
             Please choose 1080p for highest quality.
           </p>
-          <h4> Reference and Concept board:</h4>
-          <div class="big-img-tag">
-            <div class="image-tag">
-              <img src="../img/ims213/castleRef.webp" alt="Castle Concept board">
-              <!-- <figcaption>Obsidian rendered from Mudbox </figcaption> -->
-            </div>
-          </div>
+          <h4> Game mechanics:</h4>
+          <p class="reflection">
+            Laser Pistols that have 20 bullets.
+          </p>
+          <p class="reflection">
+            Laser Automatic Rifles that have 40 bullets and can shoot continuously when the player holds the trigger.
+          </p>
+          <p class="reflection">
+            <button class="jump-to-button" onclick="jumpTo(53)"><span class="timestamp">0:53</span> Point system that
+              counts total score and the number of broken red and blue targets.
+            </button>
+          </p>
+          <p class="reflection">
+            <button class="jump-to-button" onclick="jumpTo(62)"><span class="timestamp">1:02</span> In Sandbox mode, a
+              Button that can start spawning targets or stop spawning targets.</button>
+          </p>
+          <p class="reflection">
+            <button class="jump-to-button" onclick="jumpTo(99)"><span class="timestamp">1:39</span> Dual wield pistols
+              or automatic rifles.</button>
+          </p>
+          <p class="reflection">
+            <button class="jump-to-button" onclick="jumpTo(139)"><span class="timestamp">2:19</span> 2 handed grab
+              automatic rifle.</button>
+          </p>
+          <p class="reflection">
+            <button class="jump-to-button" onclick="jumpTo(199)"><span class="timestamp">3:19</span> Throw the gun to
+              break the targets. The player can also hold the gun and punch to break the targets instead.</button>
+          </p>
+          <p class="reflection">
+            <button class="jump-to-button" onclick="jumpTo(895)"><span class="timestamp">14:55</span> Escape</button>
+          </p>
+          <!-- <video id="winCondition" controls width="1138" height="640" src="winCondition.mp4"></video> -->
+          <iframe id="zapperGame" width="960" height="540" src="https://www.youtube.com/embed/fDOeb5BVMsY?enablejsapi=1"
+            title="YouTube video
+            player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
 
