@@ -108,7 +108,8 @@
             <strong>Sandbox Mode: </strong> Unlimited time for casual practice and experimentation.
           </p>
           <p class="p-reflection">
-            <strong>Timer Mode:</strong> Players have 90 seconds to score as many points as possible, encouraging
+            <strong>Timer Mode:</strong> Players have 90 seconds to score as many points as possible and targets will
+            spawn faster, increasing difficulty and encouraging
             competition and
             high-score chasing.
           </p>
@@ -196,7 +197,12 @@
               break the targets. The player can also hold the gun and punch to break the targets instead.</button>
           </p>
           <p class="reflection">
-            <button class="jump-to-button" onclick="jumpTo(895)"><span class="timestamp">14:55</span> Escape</button>
+            <button class="jump-to-button" onclick="jumpTo(218)"><span class="timestamp">3:38</span> Button teleports
+              player from Sandbox Mode to Timer Mode and vice versa.</button>
+          </p>
+          <p class="reflection">
+            <button class="jump-to-button" onclick="jumpTo(225)"><span class="timestamp">3:45</span> In, Timer Mode, a
+              button that can start spawning targets and start countdown timer.</button>
           </p>
           <!-- <video id="winCondition" controls width="1138" height="640" src="winCondition.mp4"></video> -->
           <iframe id="zapperGame" width="960" height="540" src="https://www.youtube.com/embed/fDOeb5BVMsY?enablejsapi=1"
@@ -217,22 +223,161 @@
     <div class="small-div-project-highlight">
       <h4> Reflection:</h4>
       <p class="reflection">
-        This project showcased my ability to work effectively with modular assets to design a cohesive and immersive
-        environment. It allowed me to explore atmospheric storytelling through thoughtful composition, lighting, and
-        cinematic camera work.
+        Throughout the development of Laser Target VR, our team encountered several technical and organizational
+        challenges that provided valuable learning experiences. Below are the key issues faced, how they were resolved,
+        and what I learned from them.
+      </p>
+      <p class="reflection">
+        <strong>1. Version Control & GitHub Conflict</strong>
+      </p>
+      <p class="reflection">
+        In the final week of the project, a GitHub conflict caused a critical branch to break due to a team member’s
+        push error. I resolved the issue by:
+      </p>
+      <p class="reflection">
+        <em>• Creating a new branch</em>
+      </p>
+      <p class="reflection">
+        <em>• Pushing the correct content from a local backup</em>
+      </p>
+      <p class="reflection">
+        <em>• Recloning the repository</em>
+      </p>
+      <p class="reflection">
+        This process involved multiple trial-and-error attempts, which delayed development. Moving forward, I plan to
+        create multiple backup branches and maintain local zipped project folders as redundancy measures.
+      </p>
+      <p class="reflection">
+        <strong>2. Target Spawning Collision Bug</strong>
+      </p>
+      <p class="reflection">
+        An issue arose where blue targets failed to function correctly. Initially, we assumed the issue was within the
+        target logic. However, I later discovered that a box collider from the initial spawner (which I kept for
+        positioning reference) was unintentionally blocking signals. This collider interfered with spawned targets,
+        rendering them non-functional.
+      </p>
+      <p class="reflection">
+        To avoid this in the future, I will:
+      </p>
+      <p class="reflection">
+        <em>• Remove placeholder colliders early on</em>
+      </p>
+      <p class="reflection">
+        <em>• Recloning the repository</em>
+      </p>
+      <p class="reflection">
+        <em>• Leave annotated notes or use development-only gizmos for positioning references</em>
+      </p>
+      <p class="reflection">
+        <strong>3. Team Resource Management</strong>
+      </p>
+      <p class="reflection">
+        Due to miscommunication about the submission deadline (I mistakenly assumed we had class time to work on it),
+        only two members, including myself, were available to complete the game the night before submission. I’ve
+        learned to:
+      </p>
+      <p class="reflection">
+        <em>• Confirm submission deadlines in advance</em>
+      </p>
+      <p class="reflection">
+        <em>• Ensure better team coordination by scheduling collaboration earlier</em>
+      </p>
+      <p class="reflection">
+        In future projects, I will more proactively involve the entire team and assign tasks based on realistic
+        timelines.
+
+      </p>
+
+      <p class="reflection">
+        <strong>5. Target Spawning & UI Mode Switching</strong>
+      </p>
+      <p class="reflection">
+        Creating functional buttons for spawning targets and managing both game modes (sandbox and timer) was complex.
+        Initially, duplicating UI buttons led to inconsistent behaviors—sometimes activating the wrong mode.
 
       </p>
       <p class="reflection">
-        One of the key challenges was guiding the viewer’s eye through the scene—requiring careful consideration of
-        object placement, visual hierarchy, and environmental storytelling. I leveraged lighting and fog not only to
-        create depth and mood but also to enhance narrative pacing and build anticipation as the camera moves through
-        the space.
-      </p>
-      <p class="reflection">
-        Overall, this project deepened my understanding of visual storytelling in 3D environments and strengthened my
-        skills in scene assembly, mood creation, and real-time presentation.
+        I solved this by utilizing Unity Events in the XRInteractable script, significantly streamlining the logic.
+        This taught me the importance of using Unity’s built-in event systems for modular and scalable UI interactions.
       </p>
 
+      <p class="reflection">
+        <strong>6. Team Leadership & Scheduling</strong>
+      </p>
+      <p class="reflection">
+        As a team lead, I:
+      </p>
+      <p class="reflection">
+        <em>• Set clear internal deadlines</em>
+      </p>
+      <p class="reflection">
+        <em>• Accommodated teammates' needs (e.g., giving more time to a team member due to health concerns)</em>
+      </p>
+      <p class="reflection">
+        <em>• Ensured the core development stayed ahead of schedule</em>
+      </p>
+      <p class="reflection">
+        This proactive planning helped reduce last-minute stress and allowed us to focus on polish rather than emergency
+        fixes.
+      </p>
+      <p class="reflection">
+        <strong>7. Code Documentation & Scene Organization</strong>
+      </p>
+      <p class="reflection">
+        I identified the need for better in-code documentation and scene hierarchy organization:
+
+      </p>
+      <p class="reflection">
+        Some bugs resulted from forgetting why certain objects were left active (e.g., target spawn colliders)
+      </p>
+      <p class="reflection">
+        As the scene became more populated, it became difficult to find objects, slowing development
+      </p>
+      <p class="reflection">
+        In future projects, I will:
+      </p>
+      <p class="reflection">
+        <em>• Leave detailed comments explaining each function, its use, and any temporary setups</em>
+      </p>
+      <p class="reflection">
+        <em>• Maintain a clean and organized hierarchy with consistent naming conventions</em>
+      </p>
+      <p class="reflection">
+        <em>• Use folders and grouping for large scenes to streamline navigation</em>
+      </p>
+      <p class="reflection">
+        <strong>8. Performance Optimization</strong>
+      </p>
+      <p class="reflection">
+        The scene suffered from performance drops, especially when the player turned around. I took initiative by asking
+        a teammate to implement Level of Detail (LOD) systems for the trees. While I intended to reduce tree count
+        manually, I struggled to select them due to terrain selection issues.
+      </p>
+      <p class="reflection">
+        Next time, I will:
+      </p>
+      <p class="reflection">
+        <em>• Use Unity’s hierarchy or isolation tools to manage dense environments</em>
+      </p>
+      <p class="reflection">
+        <em>• Investigate optimization earlier in development to ensure stable performance</em>
+      </p>
+
+      <p class="reflection">
+        <strong>Final Thoughts</strong>
+      </p>
+      <p class="reflection">
+        Despite challenges, this project was a valuable learning experience in VR interaction, team collaboration,
+        problem-solving, and game optimization. I’m proud of our progress and the functionality we achieved. In future
+        projects, I aim to:
+
+      </p>
+      <p class="reflection">
+        <em>• Improve team-wide task distribution and communication</em>
+      </p>
+      <p class="reflection">
+        <em>• Allocate time for polish and performance tuning</em>
+      </p>
 
 
     </div>
