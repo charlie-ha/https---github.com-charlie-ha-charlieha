@@ -6,12 +6,86 @@
   border: 0;
   box-sizing: border-box;
 }
-
+/* top navigation bar */
 img {
   max-width: 100%;
   height: auto;
   /* height: 200px; */
 }
+nav {
+  float: right;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0px;
+}
+#myWorks {
+  border-bottom: 2px solid #3081d0;
+}
+#myWorks a {
+  color: #3081d0;
+}
+.effect {
+  font: bold 2em Helvetica, Arial, sans-serif;
+  padding: 20px;
+  position: relative;
+  text-decoration: none;
+  color: #3081d0;
+}
+.effect::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #3081d0;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+.effect:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.container {
+  text-align: center;
+  width: auto;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  width: 401px;
+  height: 550px;
+  padding-top: 1rem;
+  border-radius: 30px;
+  align-items: center;
+  img {
+    padding: 1rem 0;
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
+body {
+  font-family: "Roboto", sans-serif;
+
+  color: #000000;
+  padding-top: 2 rem;
+
+  justify-content: center;
+  background-color: #b0a4a4;
+}
+/* Main Product Catalog */
 .star-review {
   max-width: 100%;
   width: 70px;
@@ -126,7 +200,7 @@ button:active {
 .big-img-tag {
   display: flex;
 }
-article {
+/* article {
   max-width: 1100px;
   font: normal 2rem Verdana, sans-serif;
   display: flex;
@@ -135,18 +209,29 @@ article {
   justify-content: center;
   margin: 0 auto;
   padding-bottom: 2rem;
-}
+} */
 
 figcaption {
   text-align: center;
   padding: 0.5rem;
 }
-.reflection {
+/* .reflection {
   background-color: rgb(255, 255, 255);
   text-align: center;
   padding: 1ch;
   font: bold 1.5rem Verdana, sans-serif;
   border-radius: 20px;
+} */
+/* reflection */
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main {
+  max-width: 1100px;
+  font: normal 1rem Verdana;
+  /* display: flex; */
 }
 @media screen and (max-width: 800px) {
   .card-container {
