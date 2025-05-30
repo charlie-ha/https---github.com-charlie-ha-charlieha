@@ -1,0 +1,187 @@
+/* Recommended CSS reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  /* height: 200px; */
+}
+.star-review {
+  max-width: 100%;
+  width: 70px;
+}
+.review-div {
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  text-align: center;
+  padding: 1ch 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2 {
+  padding: 1ch 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.chess-galaxy-nav {
+  display: flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+  align-items: center;
+  img {
+    max-width: 100%;
+    width: 1000px;
+  }
+}
+
+.purple {
+  color: #662d91;
+}
+.wrap-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0.5ch;
+  max-width: 1100px;
+  margin: 0 auto;
+  p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+}
+
+.card-container {
+  border-radius: 20px;
+  text-align: center;
+  width: 25%;
+  height: 20rem;
+  /* this fixed height helps prevent shifting when longer dish names wrap */
+  padding: 0 0 0.5rem 0;
+  background-color: #dedfdd;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+  h3 {
+    padding: 0.5ch 0;
+  }
+  p {
+    padding: 0.5ch 0;
+  }
+}
+
+.card-container:hover {
+  button {
+    height: 2rem;
+  }
+}
+
+.card {
+  border-radius: 20px;
+  /* height: 100%; */
+  padding: 1ch;
+}
+
+button {
+  border-radius: 10px;
+  background-color: #662d91;
+  padding: 0;
+  height: 0;
+  color: #fff;
+  transition: 0.65s;
+  overflow: hidden;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+button:active {
+  background-color: #d465f0;
+  transition: 0.2s;
+}
+.button-container {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+}
+/*reflection section*/
+.row-left {
+  /* display: flex; */
+  gap: 1ch;
+}
+
+.row-right {
+  /* display: flex; */
+  gap: 1ch;
+}
+
+.big-img-tag {
+  display: flex;
+}
+article {
+  max-width: 1100px;
+  font: normal 2rem Verdana, sans-serif;
+  display: flex;
+  background-color: #92a9bd;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+figcaption {
+  text-align: center;
+  padding: 0.5rem;
+}
+.reflection {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 1ch;
+  font: bold 1.5rem Verdana, sans-serif;
+  border-radius: 20px;
+}
+@media screen and (max-width: 800px) {
+  .card-container {
+    width: 33.33%;
+  }
+  .row-left {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .row-right {
+    flex-wrap: wrap;
+  }
+
+  .big-img-tag {
+    flex-wrap: wrap;
+  }
+
+  article {
+    font: normal 1.25rem Verdana, sans-serif;
+  }
+  .star-review {
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-container {
+    width: 50%;
+  }
+  article {
+    font: normal 0.75rem Verdana, sans-serif;
+  }
+  .star-review {
+    max-width: 100%;
+    width: 40px;
+  }
+}
