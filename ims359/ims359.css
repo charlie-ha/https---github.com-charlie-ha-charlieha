@@ -115,10 +115,11 @@ figcaption {
   border-radius: 20px;
 }
 .big-div-reflection {
-  display: flex;
+  /* display: flex; */
+  justify-content: center;
 }
 .div-reflection {
-  width: 49%;
+  /* width: 49%; */
   h3 {
     padding: 1rem;
   }
@@ -139,6 +140,9 @@ h2 {
   text-align: center;
   color: #af1740;
   font: bold 4rem Verdana;
+}
+.stellaStella {
+  color: #3081d0;
 }
 h3 {
   padding: 1rem 0;
