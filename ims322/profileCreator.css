@@ -233,8 +233,8 @@ select {
   padding-top: 0.25rem;
 }
 .display-name {
-  font: 2.5rem bold Verdana, sans-serif;
-  color: #fff;
+  font: 2rem bold Verdana, sans-serif;
+  color: #dbdbdb;
 }
 .drop-down {
   color: #9e9a99;
