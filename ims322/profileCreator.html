@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../ims213/castle.css">
-  <script src="https://www.youtube.com/iframe_api"></script><!--load ytb api to control where to jump to-->
-  <!-- <script src="../ims213/desertTown.js" defer></script> -->
-  <title>Bloodmoon Castle</title>
+  <link rel="stylesheet" href="../ims322/profileCreator.css">
+  <!-- <script src="https://www.youtube.com/iframe_api"></script>load ytb api to control where to jump to -->
+  <script src="../ims322/profileCreator.js" defer></script>
+  <title>Profile Creator</title>
 
 </head>
 
@@ -49,19 +49,92 @@
 
   </header>
   <div class="column">
-    <h2>Gate of the Bloodmoon Castle</h2>
+    <!-- <h2>Profile Creator</h2> -->
 
     <main>
 
       <div class="big-div-reflection">
         <div class="div-reflection"><!--bigger thumbnail -->
-          <!-- <iframe width="600" height="400"
-            src="https://www.youtube.com/embed/zT_NA9sj4-M?autoplay=1&loop=1&playlist=zT_NA9sj4-M&disablekb=1&modestbranding=1"
-            title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-          </iframe> -->
-          <div class="image-tag thumbnail">
-            <img src="../img/ims213/castleThumb2.webp" alt="castleThumbnail">
+          <h1 class="welcome">Welcome to ChessEnthust Club!</h1>
+          <h2>Where every move counts</h2>
 
+
+          <dialog id="modal">
+            <form method="dialog" autocomplete="off">
+              <button id="close-button">X</button>
+              <div class="title">
+                <h3>Create your ChessEnthust Profile</h3>
+              </div>
+              <div class="modal-body">
+                <div class="modal-content">
+                  <div class="modal-input">
+                    <label for=""><img src="../img/ims322/profileCreator/displayName.webp" alt=""
+                        class="modal-img"></label><input type="text" id="display-name"
+                      placeholder="Display name: e.g. CheckmateChamp" required>
+                  </div>
+                </div>
+                <div class="modal-content">
+                  <div class="modal-input">
+                    <label for=""><img src="../img/ims322/profileCreator/rating.webp" alt=""
+                        class="modal-img"></label><input type="number" id="number-input"
+                      placeholder="Rating: e.g. 1945 elo" required>
+                  </div>
+                </div>
+                <div class="modal-content">
+                  <div class="modal-input">
+                    <label for=""><img src="../img/ims322/profileCreator/favoritePiece.webp" alt=""
+                        class="modal-img"></label><select name="Dropdown" id="drop-down" required>
+                      <option value="">Favorite chess piece </option>
+                      <option value="Pawn"><label for=""><img src="../img/ims322/profileCreator/bishop.webp" alt=""
+                            class="modal-img"></label>Pawn
+                      </option>
+                      <option value="Bishop"><label for=""><img src="../img/ims322/profileCreator/bishop.webp" alt=""
+                            class="modal-img"></label>Bishop
+                      </option>
+                      <option value="Knight"><label for=""><img src="../img/ims322/profileCreator/knight.webp" alt=""
+                            class="modal-img"></label>Knight
+                      </option>
+                      <option value="Rook"><label for=""><img src="../img/ims322/profileCreator/rook.webp" alt=""
+                            class="modal-img"></label>Rook
+                      </option>
+                      <option value="King"><label for=""><img src="../img/ims322/profileCreator/king.webp" alt=""
+                            class="modal-img"></label>King
+                      </option>
+                      <option value="Queen"><label for=""><img src="../img/ims322/profileCreator/queen.webp" alt=""
+                            class="modal-img"></label>Queen
+                      </option>
+
+                    </select>
+                  </div>
+                </div>
+
+                <div class="modal-content">
+                  <div class="modal-input">
+                    <label for=""><img src="../img/ims322/profileCreator/bio.webp" alt=""
+                        class="modal-img"></label><input type="text" id="bio"
+                      placeholder="Bio: e.g. Checkmate every game" required>
+                  </div>
+                </div>
+
+                <div class="div-submit-button">
+                  <button type="submit" id="submit-button" class="submit-button">Submit</button>
+
+                </div>
+
+
+              </div>
+            </form>
+          </dialog>
+          <div class="profile" id="profile">
+            <div id="profile-img" class="profile-img">
+              <img alt="" id="img-tag">
+            </div>
+            <div>
+              <p> <span id="display-name-output" class="display-name"></span> </p>
+              <p>Rating: <span id="text-output" class="text-output-rating"></span></p>
+              <p>Favorite chess piece: <span id="drop-down-output" class="drop-down"></span> </p>
+              <p class="bio-style"> <span id="bio-output" class="bio"></span></p>
+            </div>
           </div>
         </div>
         <div class="div-reflection"> <!--describe project date and time -->
@@ -69,49 +142,53 @@
             Project type:
           </h4>
           <p class="p-reflection">
-            Castle Level Design in Unreal Engine.
+            Profile Creator Website Project.
           </p>
           <h4>
-            Project description:
+            Project description and Reflection:
           </h4>
           <p class="p-reflection">
-            There are two goals with this project: First, to familiarize myself
-            with a common practice in contemporary game design and
-            development: "Kit-bashing." And second, to create a portfolio-worthy
-            30 second fly-through of a tiny medieval fantasy scene of my own
-            creation
+            This is a Chess Profile creator for passionate chess player. As a chess player, I believe that chess players
+            would
+            enjoy reflecting our strengths through our ratings, our personality through favorite chess piece and bio.
+            <strong>For avatar
+              choices, each different chosen "Favorite chess piece" will be an avatar of that chess piece.</strong>
+          </p>
+          <p class="p-reflection">
+            ------------------
           </p>
 
           <p class="p-reflection">
-            For this project, I was provided with a collection of kitbash-ready components designed for a fantasy
-            medieval castle and village. My objective was to design and assemble a visually compelling landscape
-            featuring a small castle, surrounding village elements, and produce a cinematic, portfolio-worthy
-            flythrough—all presented in a single seamless take.
+            I did
+            not put "favorite opening" as an option because it is actually best kept secret since players would
+            research
+            their
+            opponents and this would make it easier for them. I understand that if this were a project that is going to
+            be
+            published
+            online for chess players to use, they would not actually reveal their "true" favorite opening online.
           </p>
           <p class="p-reflection">
             ------------------
           </p>
           <p class="p-reflection">
-            I began by analyzing the kitbash asset map to understand the full range of modular pieces available. To
-            establish a strong visual direction, I researched architectural references and fantasy environments on
-            Pinterest. With a clear vision in mind, I created a whitebox layout to block out the spatial composition of
-            the castle and surrounding structures.
+
+            Before building the website, I was wondering how to deal with the drop-down being a long list and if it is
+            going
+            to
+            interfere with the interface significantly. It turned out that it does not, which is a relief.
+            After the feedback for the wireframe, I made the title: "Create your Chess Profile" stack up so that they
+            are
+            nicely centered
+            in the middle. I
+            also increase the whiteness to the title so that it does not get mixed up with the ones that need input. In
+            the
+            profile section after closing the modal, I also added a
+            line so that it separates the Rating, Favorite chess piece from the Bio.
+            I am excited to see what I can do in the future.
           </p>
-          <p class="p-reflection">
-            ------------------
-          </p>
-          <p class="p-reflection">
-            The final flythrough opens at the castle entrance, flanked by two illuminated giant stone lions. A foggy
-            atmosphere partially obscures the background, while a half-moon—partially hidden behind the towering
-            entrance—builds anticipation for the viewer. As the camera slowly moves forward, the massive doors open,
-            revealing a path lined with stone horse statues. I placed a mannequin beside the statues to convey a clear
-            sense of scale.
-          </p>
-          <p class="p-reflection">
-            The pathway leads to a towering structure crowned with a goddess statue, with a full blood moon dramatically
-            rising in the background. The flythrough concludes with a vertical ascent, the fog lifting to reveal the
-            entire castle from a top-down perspective, capturing the full grandeur of the scene.
-          </p>
+
+
 
 
           <h4>
@@ -124,29 +201,77 @@
             Role:
           </h4>
           <p class="p-reflection">
-            Level Designer.
+            Web Developer and Web Designer.
           </p>
         </div>
 
       </div>
-      <h3>Project highlight:</h3>
+
       <div class="big-div-project-highlight">
         <div class="small-div-project-highlight">
-          <h4> Fly through:</h4>
 
-          <iframe width="960" height="540" src="https://www.youtube.com/embed/19Rd6a5PNw4?si=mYHIYKlbSKNofDud&vq=hd1080"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <p class="reflection">
-            Please choose 1080p for highest quality.
-          </p>
-          <h4> Reference and Concept board:</h4>
+          <h4> Concept Sketch and Wireframe:</h4>
           <div class="big-img-tag">
             <div class="image-tag">
-              <img src="../img/ims213/castleRef.webp" alt="Castle Concept board">
-              <!-- <figcaption>Obsidian rendered from Mudbox </figcaption> -->
+              <img src="../img/ims322/profileCreator/SketchProfileCreator1.webp" alt="First Profile Sketch">
+              <figcaption>First Profile Sketch</figcaption>
             </div>
+            <div class="image-tag">
+              <img src="../img/ims322/profileCreator/SketchProfileCreator2.webp" alt="First Profile Input Sketch">
+              <figcaption>First Profile Input Sketch</figcaption>
+            </div>
+          </div>
+          <div class="big-img-tag">
+            <div class="image-tag">
+              <img src="../img/ims322/profileCreator/SketchProfileCreator3.webp" alt="Second Profile Sketch">
+              <figcaption>Second Profile Sketch</figcaption>
+            </div>
+            <div class="image-tag">
+              <img src="../img/ims322/profileCreator/SketchProfileCreator4.webp" alt="Third Profile Input Sketch">
+              <figcaption>Second Profile Input Sketch </figcaption>
+            </div>
+          </div>
+          <div class="big-img-tag">
+            <div class="image-tag">
+              <img src="../img/ims322/profileCreator/Wireframe_ProfileCreator.webp"
+                alt="Profile Creator Wire Frame without annotations">
+              <figcaption>Profile Creator Wire Frame without annotations</figcaption>
+            </div>
+            <div class="image-tag">
+              <img src="../img/ims322/profileCreator/WireframeAnnotate_ProfileCreator.webp"
+                alt="Profile Creator Wire Frame with annotations">
+              <figcaption>Profile Creator Wire Frame with annotations</figcaption>
+            </div>
+
+          </div>
+          <div class="big-img-tag">
+            <div class="image-tag">
+              <img src="../img/ims322/profileCreator/bishopIcon.webp"
+                alt="Profile Creator Wire Frame without annotations">
+              <figcaption>Profile Creator Wire Frame without annotations</figcaption>
+            </div>
+            <div class="image-tag">
+              <img src="../img/ims322/profileCreator/knightIcon.webp" alt="Profile Creator Wire Frame with annotations">
+              <figcaption>Profile Creator Wire Frame with annotations</figcaption>
+            </div>
+            <div class="image-tag">
+              <img src="../img/ims322/profileCreator/pawnIcon.webp"
+                alt="Profile Creator Wire Frame without annotations">
+              <figcaption>Profile Creator Wire Frame without annotations</figcaption>
+            </div>
+            <div class="image-tag">
+              <img src="../img/ims322/profileCreator/knightIcon.webp" alt="Profile Creator Wire Frame with annotations">
+              <figcaption>Profile Creator Wire Frame with annotations</figcaption>
+            </div>
+            <div class="image-tag">
+              <img src="../img/ims322/profileCreator/queenIcon.webp" alt="Profile Creator Wire Frame with annotations">
+              <figcaption>Profile Creator Wire Frame with annotations</figcaption>
+            </div>
+            <div class="image-tag">
+              <img src="../img/ims322/profileCreator/rookIcon.webp" alt="Profile Creator Wire Frame with annotations">
+              <figcaption>Profile Creator Wire Frame with annotations</figcaption>
+            </div>
+
           </div>
         </div>
 
@@ -154,42 +279,8 @@
 
 
       </div>
-  </div>
-
-
-  <div class="big-div-project-highlight">
-    <div class="small-div-project-highlight">
-      <h4> Reflection:</h4>
-      <p class="reflection">
-        This project showcased my ability to work effectively with modular assets to design a cohesive and immersive
-        environment. It allowed me to explore atmospheric storytelling through thoughtful composition, lighting, and
-        cinematic camera work.
-
-      </p>
-      <p class="reflection">
-        One of the key challenges was guiding the viewer’s eye through the scene—requiring careful consideration of
-        object placement, visual hierarchy, and environmental storytelling. I leveraged lighting and fog not only to
-        create depth and mood but also to enhance narrative pacing and build anticipation as the camera moves through
-        the space.
-      </p>
-      <p class="reflection">
-        Overall, this project deepened my understanding of visual storytelling in 3D environments and strengthened my
-        skills in scene assembly, mood creation, and real-time presentation.
-      </p>
-
-
-
-    </div>
-
-
-
-
-
-
-
-
-
     </main>
+
   </div>
 
 
