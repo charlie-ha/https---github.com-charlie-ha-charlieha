@@ -8,7 +8,7 @@ const info = [
     buy: "Add to cart",
   },
   {
-    img: "../img/geneva_white.webp",
+    img: "../img/ims322/geneva_white.webp",
     name: "Wooden Chess Set GENEVA",
     starReview: "../img/ims322/starReviews.webp",
     review: "60 reviews",
@@ -24,7 +24,7 @@ const info = [
     buy: "Add to cart",
   },
   {
-    img: "../img/brass-art-deco.webp",
+    img: "../img/ims322/brass-art-deco.webp",
     name: "Brass Art Deco",
     starReview: "../img/ims322/starReviews.webp",
     review: "79 reviews",

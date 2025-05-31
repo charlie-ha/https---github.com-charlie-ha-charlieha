@@ -102,6 +102,13 @@ h1 {
 h2 {
   padding: 1ch 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(101, 45, 144);
+}
+h4 {
+  text-align: center;
+  padding: 3rem 0;
+  font: bold 2em Verdana;
+  color: rgb(101, 45, 144);
 }
 .chess-galaxy-nav {
   display: flex;
@@ -147,9 +154,11 @@ h2 {
   cursor: pointer;
   h3 {
     padding: 0.5ch 0;
+    font: bold 1em "Lucida Console", sans-serif;
   }
   p {
     padding: 0.5ch 0;
+    font: normal 1em Lato, Montserrat, sans-serif;
   }
 }
 
@@ -222,7 +231,16 @@ figcaption {
   font: bold 1.5rem Verdana, sans-serif;
   border-radius: 20px;
 } */
-/* reflection */
+.reflection {
+  background-color: #d3dedc;
+  text-align: center;
+  padding: 1rem;
+  font: normal 1.5rem Verdana;
+  border-radius: 20px;
+}
+.big-div-reflection {
+  padding-bottom: 2em;
+}
 .column {
   display: flex;
   flex-direction: column;
@@ -248,6 +266,14 @@ main {
 
   .big-img-tag {
     flex-wrap: wrap;
+  }
+  .big-img-tag {
+    display: flex;
+    justify-content: center;
+  }
+  .image-tag {
+    padding-right: 0.5rem;
+    text-align: center;
   }
 
   article {
