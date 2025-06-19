@@ -94,7 +94,7 @@ section {
   position: absolute;
   display: flex;
   justify-content: center;
-  background-image: url("img/waveform.webp");
+  background-image: url("../img/waveform.webp");
   /* background-repeat: no-repeat; */
 }
 
