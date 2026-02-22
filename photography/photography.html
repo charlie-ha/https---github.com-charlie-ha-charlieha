@@ -54,23 +54,7 @@
 
 <body>
 
-	<header>
-		<div class="topnav">
-			<button style="font-size:4em"><a href="javascript:void(0);" class="icon" onclick="menu();"><i
-						class="fa fa-bars"></i></a></button>
-			<nav id="navigation">
-				<ul>
-					<li class="effect"><a href="../index.html">Profile</a></li>
-					<li id="myWorks" class="effect"><a href="../myWorks.html">My Works</a></li>
-
-					<li class="effect"><a href="../contact.html"> Contact </a></li>
-
-				</ul>
-			</nav>
-
-		</div>
-		<h1><a href="../index.html">CHARLIE HA</a></h1>
-	</header>
+	<div id="nav-placeholder"></div>
 
 
 	<article>
@@ -114,7 +98,14 @@
 		<img src="../img/creme.jpg">
 	</div>
 
-
+	<!-- consistent top nav across pages -->
+	<script>
+		fetch("../nav.html")
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById("nav-placeholder").innerHTML = data;
+			});
+	</script>
 
 </body>
 
