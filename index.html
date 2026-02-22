@@ -58,14 +58,14 @@
 
 <body>
 
-	<header>
+	<!-- <header>
 		<div class="topnav">
 			<button style="font-size:4em"><a href="javascript:void(0);" class="icon" onclick="menu();"><i
 						class="fa fa-bars"></i></a></button>
 			<nav id="navigation">
 				<ul>
 					<li class="effect" id="profile"><a href="index.html">Profile</a></li>
-					<li class="effect"><a href="myWorks.html">My Works</a></li>
+					<li class="effect"><a href="myWorks.html">Projects</a></li>
 
 					<li class="effect"><a href="contact.html"> Contact </a></li>
 
@@ -79,8 +79,8 @@
 				src="https://www.youtube.com/embed/ItMCp9A4eP0?autoplay=1&controls=0&loop=1&playlist=ItMCp9A4eP0&modestbranding=1&mute=1"
 				frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 		</div>
-	</header>
-
+	</header> -->
+	<div id="nav-placeholder"></div>
 
 	<article>
 
@@ -98,7 +98,14 @@
 			etc.).</p>
 	</article>
 
-
+	<!-- consistent top nav across pages -->
+	<script>
+		fetch("nav.html")
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById("nav-placeholder").innerHTML = data;
+			});
+	</script>
 
 </body>
 
