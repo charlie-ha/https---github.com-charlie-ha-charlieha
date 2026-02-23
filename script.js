@@ -7,7 +7,7 @@ function menu() {
   }
 }
 // Load Bottom CTA
-fetch("bottomNav.html")
+fetch("../bottomNav.html")
   .then((response) => response.text())
   .then((data) => {
     document.getElementById("bottom-cta-placeholder").innerHTML = data;

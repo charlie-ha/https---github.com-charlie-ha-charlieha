@@ -21,7 +21,10 @@ nav ul {
   color: #3081d0;
 }
 .effect {
-  font: bold 2em Helvetica, Arial, sans-serif;
+  font:
+    bold 2em Helvetica,
+    Arial,
+    sans-serif;
   padding: 20px;
   position: relative;
   text-decoration: none;
@@ -35,7 +38,9 @@ nav ul {
   width: 0;
   height: 2px;
   background-color: #3081d0;
-  transition: width 0.3s ease, left 0.3s ease;
+  transition:
+    width 0.3s ease,
+    left 0.3s ease;
 }
 .effect:hover::after {
   width: 100%;
@@ -44,7 +49,7 @@ nav ul {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #0f0f14;
 }
 .container {
   text-align: center;
@@ -130,7 +135,9 @@ figcaption {
   }
 }
 h1 {
-  font: bold 3em "Lucida Console", sans-serif;
+  font:
+    bold 3em "Lucida Console",
+    sans-serif;
   padding-top: 22px;
   text-align: center;
 }

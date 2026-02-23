@@ -44,7 +44,7 @@ button {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #161b22;
 }
 img {
   width: 100%;
@@ -88,7 +88,7 @@ p {
 .bottom-cta {
   padding: 4rem 2rem;
   text-align: center;
-  background: #111;
+  background: #0f0f14;
   color: white;
   /* hide if user is not at the bottom */
   opacity: 0;
@@ -134,7 +134,7 @@ p {
 
 .cta-secondary:hover {
   background: white;
-  color: black;
+  color: #161b22;
 }
 
 /* computer and above */
@@ -161,6 +161,6 @@ p {
   }
   .topnav a:hover {
     background-color: #ddd;
-    color: black;
+    color: #161b22;
   }
 }
