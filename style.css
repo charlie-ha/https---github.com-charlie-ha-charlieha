@@ -75,10 +75,20 @@ h3 {
     sans-serif;
   text-align: center;
 }
+h5 {
+  font:
+    bold 2em Lato,
+    Montserrat,
+    sans-serif;
+  margin: 0.5em 0 0.25em 0;
+  text-align: center;
+  padding: 0;
+}
 p {
   text-align: center;
+  align-items: center;
   font:
-    normal 2em Lato,
+    normal 1.75em Lato,
     Montserrat,
     sans-serif;
   /* margin: 0.75% 10% 0 10%; */
@@ -137,6 +147,7 @@ p {
   color: #161b22;
 }
 /* ===== Tags ===== */
+/* tag list */
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -144,10 +155,14 @@ p {
   margin: 8px 0;
   padding: 0;
   list-style: none;
+  justify-content: center;
 }
-
+/* tag item */
 .tag {
-  font-size: 0.75rem;
+  font:
+    normal 0.75rem Lato,
+    Montserrat,
+    sans-serif;
   padding: 4px 10px;
   border-radius: 20px;
   letter-spacing: 0.5px;
@@ -176,7 +191,7 @@ p {
   color: white;
 }
 
-.systems {
+.atmospheric {
   background: #6b46c1;
   color: white;
 }
