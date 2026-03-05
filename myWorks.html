@@ -1,7 +1,7 @@
 <html>
 
 <head>
-	<title>Charlie HaHa's Portfolio</title>
+	<title>Charlie Ha's Portfolio</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,49 +16,69 @@
 			color: #3081D0;
 		}
 
-		.myWorks-nav ul {
-			list-style-type: none;
-			margin: 0px;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-around;
-			gap: 2ch;
+
+		.project-list {
+
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			/* 3 cards per row */
+			gap: 2rem;
+			padding: 2rem;
 		}
 
-		.myWorks-nav ul a {
-			min-width: 300px;
-			width: 50%;
-			max-width: 400px;
-		}
 
-		.myWorks-nav ul li {
+		.project-card {
 			background-color: rgb(77, 106, 136, 0.6);
 			border-radius: 20px;
 			color: white;
-			transition: all 1s ease;
+			transition: all 0.5s ease;
+
+			display: flex;
+			flex-direction: column;
+			height: 100%;
 		}
+
+		.project-card a {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			color: white;
+		}
+
+
 
 		.myWorks-nav ul li:hover {
 			background-color: rgba(53, 55, 75, 1.0);
 		}
 
-		p {
-			height: 2.5rem;
-			overflow: hidden;
-			transition: 0.6s;
+
+		.project-card h3,
+		.project-card p {
+			padding: 0 1rem;
 		}
 
 		.open-text {
-			height: 5rem;
+			margin-top: auto;
+			/* pushes description to bottom */
+			padding-bottom: 1rem;
 		}
 
 		.image {
 			width: 100%;
-			height: 500px;
+			aspect-ratio: 16 / 9;
 			background-size: cover;
 			background-position: center;
 			border-radius: 20px 20px 0 0;
-			transition: transform 0.5s ease;
+			/* transition: transform 0.5s ease; */
+			overflow: hidden;
+		}
+
+		.image iframe {
+			width: 100%;
+			height: 100%;
+			border: none;
+			pointer-events: none;
+			/* prevents weird hover issues */
 		}
 
 		.music-player {
@@ -199,12 +219,10 @@
 
 
 
-		.myWorks-nav ul li:hover {
-			transform: scale(1.1);
 
-			p {
-				height: 5rem;
-			}
+		.project-card:hover {
+			transform: translateY(-8px);
+			box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 		}
 	</style>
 
@@ -234,9 +252,10 @@
 			<h2>My Works</h2>
 		</div>
 		<div class="myWorks-nav">
-			<ul>
-				<a href="zombieVirus/zombieVirus.html">
-					<li>
+			<ul class="project-list">
+
+				<li class="project-card">
+					<a href="zombieVirus/zombieVirus.html">
 						<div class="image zombieVirus-thumbnail"></div>
 						<p>Zombie Virus</p>
 						<ul class="tags">
@@ -247,10 +266,12 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Horror game in Unity -</p>
-					</li>
-				</a>
-				<a href="grillawarfare/grillawarfare.html">
-					<li>
+					</a>
+				</li>
+
+
+				<li class="project-card">
+					<a href="grillawarfare/grillawarfare.html">
 						<div class="image grillawarfare-thumbnail"></div>
 						<p>Grill-A-Warfare</p>
 						<ul class="tags">
@@ -261,10 +282,12 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Cooking-themed Shooter Game -</p>
-					</li>
-				</a>
-				<a href="VRZapper/vrZapper.html">
-					<li>
+					</a>
+				</li>
+
+
+				<li class="project-card">
+					<a href="VRZapper/vrZapper.html">
 						<div class="image vrZapper-thumbnail"></div>
 						<p>VR Zapper</p>
 						<ul class="tags">
@@ -275,14 +298,13 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- VR Shooting Game -</p>
-					</li>
-				</a>
+					</a>
+
+				</li>
 
 
-
-
-				<a href="ims213/castle.html">
-					<li>
+				<li class="project-card">
+					<a href="ims213/castle.html">
 						<div class="image castle-thumbnail"></div>
 						<p>The Bloodmoon Castle</p>
 						<ul class="tags">
@@ -293,10 +315,13 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- A Castle Kitbash -</p>
-					</li>
-				</a>
-				<a href="ims213/desertTown.html">
-					<li>
+					</a>
+
+				</li>
+
+
+				<li class="project-card">
+					<a href="ims213/desertTown.html">
 						<div class="image desertTown-thumbnail"></div>
 						<p>Desert Town</p>
 						<ul class="tags">
@@ -307,10 +332,13 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Murder Mystery Game -</p>
-					</li>
-				</a>
-				<a href="coastalCombat/coastalCombat.html">
-					<li>
+					</a>
+
+				</li>
+
+
+				<li class="project-card">
+					<a href="coastalCombat/coastalCombat.html">
 						<div class="image coastalCombat-thumbnail"></div>
 						<p>Coastal Combat⚡️</p>
 						<ul class="tags">
@@ -321,10 +349,13 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- 2D Shoot them up -</p>
-					</li>
-				</a>
-				<a href="ims359/emotionalMontage.html">
-					<li>
+					</a>
+
+				</li>
+
+
+				<li class="project-card">
+					<a href="ims359/emotionalMontage.html">
 						<div class="image emotionalMontage-thumbnail"></div>
 						<p>Unsettling Feeling</p>
 						<ul class="tags">
@@ -335,11 +366,13 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Emotional Montage -</p>
-					</li>
-				</a>
+					</a>
 
-				<a href="ims359/cageOfGuilt.html">
-					<li>
+				</li>
+
+
+				<li class="project-card">
+					<a href="ims359/cageOfGuilt.html">
 						<div class="image cageOfGuilt-thumb"></div>
 						<p>The Cage Of Guilt</p>
 						<ul class="tags">
@@ -350,11 +383,13 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Silent-Hill inspired Animation -</p>
-					</li>
-				</a>
+					</a>
 
-				<a href="ims359/stellaStella.html">
-					<li>
+				</li>
+
+
+				<li class="project-card">
+					<a href="ims359/stellaStella.html">
 						<div class="image stellaStella-thumbnail"></div>
 						<p>Stellar Stellar</p>
 						<ul class="tags">
@@ -365,10 +400,13 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Fan Made Music Video -</p>
-					</li>
-				</a>
-				<a href="ims322/productCatalog.html">
-					<li>
+					</a>
+
+				</li>
+
+
+				<li class="project-card">
+					<a href="ims322/productCatalog.html">
 						<div class="image productCatalog-thumbnail"></div>
 						<p>Chess Galaxy</p>
 						<ul class="tags">
@@ -379,10 +417,12 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Product Catalog Website -</p>
-					</li>
-				</a>
-				<a href="ims322/profileCreator.html">
-					<li>
+					</a>
+
+				</li>
+
+				<li class="project-card">
+					<a href="ims322/profileCreator.html">
 						<div class="image profileCreator-thumbnail"></div>
 						<p>Chess Profile Creator</p>
 						<ul class="tags">
@@ -393,11 +433,13 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Profile Creator Website -</p>
-					</li>
-				</a>
+					</a>
 
-				<a href="podcast/podcast.html">
-					<li>
+				</li>
+
+
+				<li class="project-card">
+					<a href="podcast/podcast.html">
 						<div class="image podcast"></div>
 						<p>Podcast</p>
 						<ul class="tags">
@@ -408,10 +450,12 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Studying abroad experiences -</p>
-					</li>
-				</a>
-				<a href="musicPlayer/musicPlayerProject.html">
-					<li>
+					</a>
+
+				</li>
+
+				<li class="project-card">
+					<a href="musicPlayer/musicPlayerProject.html">
 						<div class="image music-player"></div>
 						<p>Music Player Project</p>
 						<ul class="tags">
@@ -422,17 +466,20 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Playable Music Player -</p>
-					</li>
-				</a>
+					</a>
+
+				</li>
+
 				<!-- <a href="nanobot/nanobot.html">
-					<li>
+					<li class="project-card">
 						<div class="image nanobot-thumbnail"></div>
 						<p>Nanobots</p>
 						<p class="open-text">- Board game -</p>
 					</li>
 				</a> -->
-				<a href="animation/walkcycle.html">
-					<li>
+
+				<li class="project-card">
+					<a href="animation/walkcycle.html">
 						<div class="image walkcycle-thumbnail">
 							<iframe width="400" height="300"
 								src="https://www.youtube.com/embed/OlNanUIKESw?autoplay=1&loop=1&playlist=OlNanUIKESw&controls=0&disablekb=1&modestbranding=1&mute=1"
@@ -448,10 +495,13 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Animation projects -</p>
-					</li>
-				</a>
-				<a href="animation/idleAnimation.html">
-					<li>
+					</a>
+
+				</li>
+
+
+				<li class="project-card">
+					<a href="animation/idleAnimation.html">
 						<div class="image idleAnimation-thumbnail">
 							<iframe width="400" height="300"
 								src="https://www.youtube.com/embed/_byGVS5i-io?autoplay=1&loop=1&playlist=_byGVS5i-io&controls=0&disablekb=1&modestbranding=1&mute=1"
@@ -467,10 +517,12 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Animation projects -</p>
-					</li>
-				</a>
-				<a href="animation/dialogueAnimation.html">
-					<li>
+					</a>
+
+				</li>
+
+				<li class="project-card">
+					<a href="animation/dialogueAnimation.html">
 						<div class="image dialogueAnimation-thumbnail">
 							<iframe width="400" height="300"
 								src="https://www.youtube.com/embed/iwgB5H_g8h0?autoplay=1&loop=1&playlist=iwgB5H_g8h0&controls=0&disablekb=1&modestbranding=1&mute=1"
@@ -486,10 +538,13 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Animation project -</p>
-					</li>
-				</a>
-				<a href="animation/mocapAnimation.html">
-					<li>
+					</a>
+
+				</li>
+
+
+				<li class="project-card">
+					<a href="animation/mocapAnimation.html">
 						<div class="image mocapAnimation-thumbnail">
 							<iframe width="400" height="300"
 								src="https://www.youtube.com/embed/IKUNMqrCXFE?autoplay=1&loop=1&playlist=IKUNMqrCXFE&controls=0&disablekb=1&modestbranding=1&mute=1"
@@ -505,10 +560,13 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- MoCap Animation project -</p>
-					</li>
-				</a>
-				<a href="animation/chessKingSacAnimation.html">
-					<li>
+					</a>
+
+				</li>
+
+
+				<li class="project-card">
+					<a href="animation/chessKingSacAnimation.html">
 						<div class="image chessKingSacAnimation-thumbnail">
 							<iframe width="400" height="300"
 								src="https://www.youtube.com/embed/Vtc6CRYwDKA?autoplay=1&loop=1&playlist=Vtc6CRYwDKA&controls=0&disablekb=1&modestbranding=1&mute=1"
@@ -524,11 +582,13 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Animation project -</p>
-					</li>
-				</a>
+					</a>
+
+				</li>
+
 
 				<!-- <a href="sculpting/propRock.html">
-					<li>
+					<li class="project-card">
 						<div class="image propRock-thumbnail">
 							<iframe width="400" height="300"
 								src="https://www.youtube.com/embed/Bm-fFXTGgE0?autoplay=1&loop=1&playlist=Bm-fFXTGgE0&controls=0&disablekb=1&modestbranding=1&mute=1"
@@ -540,7 +600,7 @@
 					</li>
 				</a>
 				<a href="sculpting/obsidian.html">
-					<li>
+					<li class="project-card">
 						<div class="image obsidian-thumbnail">
 							<iframe width="400" height="300"
 								src="https://www.youtube.com/embed/y9UnP4ign4U?autoplay=1&loop=1&playlist=y9UnP4ign4U&controls=0&disablekb=1&modestbranding=1&mute=1"
@@ -551,8 +611,9 @@
 						<p class="open-text">- Rock Sculpting project -</p>
 					</li>
 				</a> -->
-				<a href="sculpting/direWolf.html">
-					<li>
+
+				<li class="project-card">
+					<a href="sculpting/direWolf.html">
 						<div class="image direWolf-thumbnail">
 							<iframe width="400" height="300"
 								src="https://www.youtube.com/embed/Ac_aWjlY8IE?autoplay=1&loop=1&playlist=Ac_aWjlY8IE&controls=0&disablekb=1&modestbranding=1&mute=1"
@@ -568,10 +629,13 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Extinct Animal Sculpt -</p>
-					</li>
-				</a>
-				<a href="sculpting/spiderLantern.html">
-					<li>
+					</a>
+
+				</li>
+
+
+				<li class="project-card">
+					<a href="sculpting/spiderLantern.html">
 						<div class="image spiderLantern-thumbnail">
 							<iframe width="400" height="300"
 								src="https://www.youtube.com/embed/C3_ghd0VWhI?autoplay=1&loop=1&playlist=C3_ghd0VWhI&controls=0&disablekb=1&modestbranding=1&mute=1"
@@ -587,10 +651,13 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Environment Prop Sculpt -</p>
-					</li>
-				</a>
-				<a href="sculpting/dragonDagger.html">
-					<li>
+					</a>
+
+				</li>
+
+
+				<li class="project-card">
+					<a href="sculpting/dragonDagger.html">
 						<div class="image dragonDagger-thumbnail">
 
 						</div>
@@ -603,10 +670,13 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Hard surface Sculpt -</p>
-					</li>
-				</a>
-				<a href="sculpting/hand.html">
-					<li>
+					</a>
+
+				</li>
+
+
+				<li class="project-card">
+					<a href="sculpting/hand.html">
 						<div class="image hand"></div>
 						<p>Hand Sculpting</p>
 						<ul class="tags">
@@ -617,10 +687,13 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Anatomy Study Sculpt -</p>
-					</li>
+					</a>
+
+				</li>
 				</a>
-				<a href="sculpting/rustyDoor.html">
-					<li>
+
+				<li class="project-card">
+					<a href="sculpting/rustyDoor.html">
 						<div class="image rustyDoor-thumbnail">
 							<!-- <iframe width="400" height="300"
 								src="https://www.youtube.com/embed/yAOj7QfKmOU?autoplay=1&loop=1&playlist=yAOj7QfKmOU&controls=0&disablekb=1&modestbranding=1&mute=1"
@@ -636,10 +709,13 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Door -</p>
-					</li>
-				</a>
-				<a href="texturing/treasureChest.html">
-					<li>
+					</a>
+
+				</li>
+
+
+				<li class="project-card">
+					<a href="texturing/treasureChest.html">
 						<div class="image treasureChest-thumbnail">
 							<!-- <iframe width="400" height="300"
 								src="https://www.youtube.com/embed/Chl1_WbJE-E?autoplay=1&loop=1&playlist=Chl1_WbJE-E&controls=0&disablekb=1&modestbranding=1&mute=1"
@@ -655,10 +731,13 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Container Texturing -</p>
-					</li>
-				</a>
-				<a href="texturing/pineTree.html">
-					<li>
+					</a>
+
+				</li>
+
+
+				<li class="project-card">
+					<a href="texturing/pineTree.html">
 						<div class="image pineTree-thumbnail">
 							<!-- <iframe width="400" height="300"
 								src="https://www.youtube.com/embed/fHglO-VFhcw?autoplay=1&loop=1&playlist=fHglO-VFhcw&controls=0&disablekb=1&modestbranding=1&mute=1"
@@ -674,10 +753,13 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Organic Vegetation Texturing -</p>
-					</li>
-				</a>
-				<a href="texturing/shack.html">
-					<li>
+					</a>
+
+				</li>
+
+
+				<li class="project-card">
+					<a href="texturing/shack.html">
 						<div class="image">
 							<iframe width="400" height="300"
 								src="https://www.youtube.com/embed/75Rbet1hpQg?autoplay=1&loop=1&playlist=75Rbet1hpQg&controls=0&disablekb=1&modestbranding=1&mute=1"
@@ -693,12 +775,14 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- House Texturing -</p>
-					</li>
-				</a>
+					</a>
+
+				</li>
+
 
 
 				<!-- <a href="texturing/witchShackEnvi.html">
-					<li>
+					<li class="project-card">
 						<div class="image witchShackEnvi-thumbnail">
 							 <iframe width="400" height="300"
 								src="https://www.youtube.com/embed/A-5rENPr3CI?autoplay=1&loop=1&playlist=A-5rENPr3CI&disablekb=1&modestbranding=1&mute=1"
@@ -709,8 +793,9 @@
 						<p class="open-text">- Environment Texturing Project -</p>
 					</li>
 				</a> -->
-				<a href="texturing/fireVFX.html">
-					<li>
+
+				<li class="project-card">
+					<a href="texturing/fireVFX.html">
 						<div class="image">
 							<iframe width="400" height="300"
 								src="https://www.youtube.com/embed/cMe4Ed-nroU?autoplay=1&loop=1&playlist=cMe4Ed-nroU&controls=0&disablekb=1&modestbranding=1&mute=1"
@@ -726,10 +811,13 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Game VFX Project -</p>
-					</li>
-				</a>
-				<a href="texturing/witchShackDiorama.html">
-					<li>
+					</a>
+
+				</li>
+
+
+				<li class="project-card">
+					<a href="texturing/witchShackDiorama.html">
 						<div class="image witchShackDiorama-thumbnail">
 							<!-- <iframe width="400" height="300"
 								src="https://www.youtube.com/embed/HbSAeJEuzuw?autoplay=1&loop=1&playlist=HbSAeJEuzuw&controls=0&disablekb=1&modestbranding=1&mute=1"
@@ -745,11 +833,12 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Diorama -</p>
-					</li>
-				</a>
+					</a>
+
+				</li>
 
 				<!-- <a href="animation/ChloeAnimation.html">
-					<li>
+					<li class="project-card">
 						<div class="image ChloeAnimation-thumbnail">
 							<iframe width="400" height="300"
 								src="https://www.youtube.com/embed/W87o5CrnWZs?autoplay=1&loop=1&playlist=W87o5CrnWZs&controls=0&disablekb=1&modestbranding=1&mute=1"
@@ -760,9 +849,9 @@
 						<p class="open-text">- Animation project -</p>
 					</li>
 				</a> -->
-				<a href="faqProject/faqProject.html">
-					<li>
-						<div class="image faq"></div>
+
+				<li class="project-card">
+					<a href="faqProject/faqProject.html">
 						<p>FAQ Project</p>
 						<ul class="tags">
 							<li class="tag horror">Horror</li>
@@ -772,13 +861,14 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Design FAQ for Chess Club -</p>
-					</li>
-				</a>
+					</a>
+					<div class="image faq"></div>
+
+				</li>
 
 
-
-				<a href="pulleyTower/pulleyTower.html">
-					<li>
+				<li class="project-card">
+					<a href="pulleyTower/pulleyTower.html">
 						<div class="image pulley-tower"></div>
 						<p>Pulley Tower</p>
 						<ul class="tags">
@@ -789,17 +879,20 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- 3D model Pulley Tower -</p>
-					</li>
-				</a>
+					</a>
+
+				</li>
+
 				<!-- <a href="foodCart/foodCart.html">
-					<li>
+					<li class="project-card">
 						<div class="image food-cart"></div>
 						<p>Food Cart</p>
 						<p class="open-text">- 3D model a Food Cart -</p>
 					</li>
 				</a> -->
-				<a href="fnaf/fnaf.html">
-					<li>
+
+				<li class="project-card">
+					<a href="fnaf/fnaf.html">
 						<div class="image fnaf"></div>
 						<p>Five Nights at Freddy's</p>
 						<ul class="tags">
@@ -810,10 +903,13 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- A translation to board game -</p>
-					</li>
-				</a>
-				<a href="photography/photography.html">
-					<li>
+					</a>
+
+				</li>
+
+
+				<li class="project-card">
+					<a href="photography/photography.html">
 						<div class="image food-photography"></div>
 						<p>Food photography</p>
 						<ul class="tags">
@@ -824,8 +920,10 @@
 							<li class="tag tool">C#</li>
 						</ul>
 						<p class="open-text">- Each layer is a story -</p>
-					</li>
-				</a>
+					</a>
+
+				</li>
+
 
 			</ul>
 		</div>
