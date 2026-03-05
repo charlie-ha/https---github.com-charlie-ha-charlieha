@@ -189,7 +189,7 @@ p {
 /* ===== TOOL TAGS (Neutral) ===== */
 
 .tool {
-  background: rgba(255, 255, 255, 0.08);
+  background: #ffaa00;
   color: #ddd;
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -206,6 +206,9 @@ p {
     padding-top: 0px;
     padding-left: 30%;
   }
+  .project-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 /* mobile */
 @media only screen and (max-width: 600px) {
@@ -219,5 +222,8 @@ p {
   .topnav a:hover {
     background-color: #ddd;
     color: #161b22;
+  }
+  .project-list {
+    grid-template-columns: 1fr;
   }
 }

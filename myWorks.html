@@ -45,6 +45,51 @@
 			color: white;
 		}
 
+		/* filtering animation */
+		.project-card.hide {
+
+			opacity: 0;
+			transform: scale(.9);
+
+			pointer-events: none;
+			display: none;
+		}
+
+		/* filter styling */
+		.filter-bar {
+			justify-content: center;
+			display: flex;
+			gap: 12px;
+
+			margin-bottom: 30px;
+			flex-wrap: wrap;
+		}
+
+		.filter-btn {
+
+			background: rgba(70, 70, 70, 0.6);
+			color: white;
+
+			border: none;
+			padding: 8px 18px;
+
+			border-radius: 20px;
+
+			cursor: pointer;
+
+			transition: all .3s ease;
+		}
+
+		.filter-btn:hover {
+
+			background: rgba(120, 120, 120, 0.6);
+		}
+
+		.filter-btn.active {
+
+			background: rgb(120, 180, 255);
+			color: black;
+		}
 
 
 		.myWorks-nav ul li:hover {
@@ -249,12 +294,21 @@
 
 
 		<div class="container">
-			<h2>My Works</h2>
+			<h2>Projects</h2>
 		</div>
+		<!-- filter bar for viewer to choose -->
+		<div class="filter-bar">
+			<button class="filter-btn active" data-filter="all">All</button>
+			<button class="filter-btn" data-filter="game">Games</button>
+			<button class="filter-btn" data-filter="vr">VR / Interactive</button>
+			<button class="filter-btn" data-filter="3D">3D / Animation</button>
+			<button class="filter-btn" data-filter="web">Web / UI</button>
+		</div>
+
 		<div class="myWorks-nav">
 			<ul class="project-list">
 
-				<li class="project-card">
+				<li class="project-card" data-category="game">
 					<a href="zombieVirus/zombieVirus.html">
 						<div class="image zombieVirus-thumbnail"></div>
 						<p>Zombie Virus</p>
@@ -270,7 +324,7 @@
 				</li>
 
 
-				<li class="project-card">
+				<li class="project-card" data-category="game">
 					<a href="grillawarfare/grillawarfare.html">
 						<div class="image grillawarfare-thumbnail"></div>
 						<p>Grill-A-Warfare</p>
@@ -286,7 +340,7 @@
 				</li>
 
 
-				<li class="project-card">
+				<li class="project-card" data-category="game vr">
 					<a href="VRZapper/vrZapper.html">
 						<div class="image vrZapper-thumbnail"></div>
 						<p>VR Zapper</p>
@@ -303,7 +357,7 @@
 				</li>
 
 
-				<li class="project-card">
+				<li class="project-card" data-category="3D">
 					<a href="ims213/castle.html">
 						<div class="image castle-thumbnail"></div>
 						<p>The Bloodmoon Castle</p>
@@ -320,7 +374,7 @@
 				</li>
 
 
-				<li class="project-card">
+				<li class="project-card" data-category="game">
 					<a href="ims213/desertTown.html">
 						<div class="image desertTown-thumbnail"></div>
 						<p>Desert Town</p>
@@ -337,7 +391,7 @@
 				</li>
 
 
-				<li class="project-card">
+				<!-- <li class="project-card" data-category="game">
 					<a href="coastalCombat/coastalCombat.html">
 						<div class="image coastalCombat-thumbnail"></div>
 						<p>Coastal Combat⚡️</p>
@@ -351,10 +405,10 @@
 						<p class="open-text">- 2D Shoot them up -</p>
 					</a>
 
-				</li>
+				</li> -->
 
 
-				<li class="project-card">
+				<li class="project-card" data-category="3D">
 					<a href="ims359/emotionalMontage.html">
 						<div class="image emotionalMontage-thumbnail"></div>
 						<p>Unsettling Feeling</p>
@@ -371,7 +425,7 @@
 				</li>
 
 
-				<li class="project-card">
+				<li class="project-card" data-category="3D">
 					<a href="ims359/cageOfGuilt.html">
 						<div class="image cageOfGuilt-thumb"></div>
 						<p>The Cage Of Guilt</p>
@@ -387,8 +441,47 @@
 
 				</li>
 
+				<li class="project-card" data-category="3D">
+					<a href="texturing/witchShackDiorama.html">
+						<div class="image witchShackDiorama-thumbnail">
+							<!-- <iframe width="400" height="300"
+								src="https://www.youtube.com/embed/HbSAeJEuzuw?autoplay=1&loop=1&playlist=HbSAeJEuzuw&controls=0&disablekb=1&modestbranding=1&mute=1"
+								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							</iframe> -->
+						</div>
+						<p>Witch Shack Diorama</p>
+						<ul class="tags">
+							<li class="tag horror">Horror</li>
+							<li class="tag gameplay">Gameplay</li>
+							<li class="tag systems">Systems</li>
+							<li class="tag tool">Unity</li>
+							<li class="tag tool">C#</li>
+						</ul>
+						<p class="open-text">- Diorama -</p>
+					</a>
 
-				<li class="project-card">
+				</li>
+				<li class="project-card" data-category="3D">
+					<a href="texturing/fireVFX.html">
+						<div class="image">
+							<iframe width="400" height="300"
+								src="https://www.youtube.com/embed/cMe4Ed-nroU?autoplay=1&loop=1&playlist=cMe4Ed-nroU&controls=0&disablekb=1&modestbranding=1&mute=1"
+								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							</iframe>
+						</div>
+						<p>Fire VFX</p>
+						<ul class="tags">
+							<li class="tag horror">Horror</li>
+							<li class="tag gameplay">Gameplay</li>
+							<li class="tag systems">Systems</li>
+							<li class="tag tool">Unity</li>
+							<li class="tag tool">C#</li>
+						</ul>
+						<p class="open-text">- Game VFX Project -</p>
+					</a>
+
+				</li>
+				<li class="project-card" data-category="3D">
 					<a href="ims359/stellaStella.html">
 						<div class="image stellaStella-thumbnail"></div>
 						<p>Stellar Stellar</p>
@@ -405,7 +498,7 @@
 				</li>
 
 
-				<li class="project-card">
+				<li class="project-card" data-category="web">
 					<a href="ims322/productCatalog.html">
 						<div class="image productCatalog-thumbnail"></div>
 						<p>Chess Galaxy</p>
@@ -421,7 +514,7 @@
 
 				</li>
 
-				<li class="project-card">
+				<li class="project-card" data-category="web">
 					<a href="ims322/profileCreator.html">
 						<div class="image profileCreator-thumbnail"></div>
 						<p>Chess Profile Creator</p>
@@ -438,7 +531,7 @@
 				</li>
 
 
-				<li class="project-card">
+				<li class="project-card" data-category="web">
 					<a href="podcast/podcast.html">
 						<div class="image podcast"></div>
 						<p>Podcast</p>
@@ -454,7 +547,7 @@
 
 				</li>
 
-				<li class="project-card">
+				<li class="project-card" data-category="web">
 					<a href="musicPlayer/musicPlayerProject.html">
 						<div class="image music-player"></div>
 						<p>Music Player Project</p>
@@ -478,7 +571,7 @@
 					</li>
 				</a> -->
 
-				<li class="project-card">
+				<li class="project-card" data-category="3D">
 					<a href="animation/walkcycle.html">
 						<div class="image walkcycle-thumbnail">
 							<iframe width="400" height="300"
@@ -500,7 +593,7 @@
 				</li>
 
 
-				<li class="project-card">
+				<li class="project-card" data-category="3D">
 					<a href="animation/idleAnimation.html">
 						<div class="image idleAnimation-thumbnail">
 							<iframe width="400" height="300"
@@ -521,7 +614,7 @@
 
 				</li>
 
-				<li class="project-card">
+				<li class="project-card" data-category="3D">
 					<a href="animation/dialogueAnimation.html">
 						<div class="image dialogueAnimation-thumbnail">
 							<iframe width="400" height="300"
@@ -543,7 +636,7 @@
 				</li>
 
 
-				<li class="project-card">
+				<li class="project-card" data-category="3D">
 					<a href="animation/mocapAnimation.html">
 						<div class="image mocapAnimation-thumbnail">
 							<iframe width="400" height="300"
@@ -565,7 +658,7 @@
 				</li>
 
 
-				<li class="project-card">
+				<li class="project-card" data-category="3D">
 					<a href="animation/chessKingSacAnimation.html">
 						<div class="image chessKingSacAnimation-thumbnail">
 							<iframe width="400" height="300"
@@ -612,7 +705,7 @@
 					</li>
 				</a> -->
 
-				<li class="project-card">
+				<li class="project-card" data-category="3D">
 					<a href="sculpting/direWolf.html">
 						<div class="image direWolf-thumbnail">
 							<iframe width="400" height="300"
@@ -634,7 +727,7 @@
 				</li>
 
 
-				<li class="project-card">
+				<li class="project-card" data-category="3D">
 					<a href="sculpting/spiderLantern.html">
 						<div class="image spiderLantern-thumbnail">
 							<iframe width="400" height="300"
@@ -656,7 +749,7 @@
 				</li>
 
 
-				<li class="project-card">
+				<!-- <li class="project-card" data-category="3D">
 					<a href="sculpting/dragonDagger.html">
 						<div class="image dragonDagger-thumbnail">
 
@@ -672,10 +765,10 @@
 						<p class="open-text">- Hard surface Sculpt -</p>
 					</a>
 
-				</li>
+				</li> -->
 
 
-				<li class="project-card">
+				<li class="project-card" data-category="3D">
 					<a href="sculpting/hand.html">
 						<div class="image hand"></div>
 						<p>Hand Sculpting</p>
@@ -692,7 +785,7 @@
 				</li>
 				</a>
 
-				<li class="project-card">
+				<li class="project-card" data-category="3D">
 					<a href="sculpting/rustyDoor.html">
 						<div class="image rustyDoor-thumbnail">
 							<!-- <iframe width="400" height="300"
@@ -714,35 +807,35 @@
 				</li>
 
 
-				<li class="project-card">
+				<!-- <li class="project-card" data-category="3D">
 					<a href="texturing/treasureChest.html">
 						<div class="image treasureChest-thumbnail">
-							<!-- <iframe width="400" height="300"
+							 <iframe width="400" height="300"
 								src="https://www.youtube.com/embed/Chl1_WbJE-E?autoplay=1&loop=1&playlist=Chl1_WbJE-E&controls=0&disablekb=1&modestbranding=1&mute=1"
 								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-							</iframe> -->
-						</div>
-						<p>Golden Treasure Chest</p>
-						<ul class="tags">
-							<li class="tag horror">Horror</li>
-							<li class="tag gameplay">Gameplay</li>
-							<li class="tag systems">Systems</li>
-							<li class="tag tool">Unity</li>
-							<li class="tag tool">C#</li>
-						</ul>
-						<p class="open-text">- Container Texturing -</p>
+							</iframe> 
+					</div>
+					<p>Golden Treasure Chest</p>
+					<ul class="tags">
+						<li class="tag horror">Horror</li>
+						<li class="tag gameplay">Gameplay</li>
+						<li class="tag systems">Systems</li>
+						<li class="tag tool">Unity</li>
+						<li class="tag tool">C#</li>
+					</ul>
+					<p class="open-text">- Container Texturing -</p>
 					</a>
 
-				</li>
+					</li> -->
 
 
-				<li class="project-card">
+				<!-- <li class="project-card" data-category="3D">
 					<a href="texturing/pineTree.html">
 						<div class="image pineTree-thumbnail">
-							<!-- <iframe width="400" height="300"
+							 <iframe width="400" height="300"
 								src="https://www.youtube.com/embed/fHglO-VFhcw?autoplay=1&loop=1&playlist=fHglO-VFhcw&controls=0&disablekb=1&modestbranding=1&mute=1"
 								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-							</iframe> -->
+							</iframe> 
 						</div>
 						<p>Pine Tree</p>
 						<ul class="tags">
@@ -755,10 +848,10 @@
 						<p class="open-text">- Organic Vegetation Texturing -</p>
 					</a>
 
-				</li>
+				</li> -->
 
 
-				<li class="project-card">
+				<!-- <li class="project-card" data-category="3D">
 					<a href="texturing/shack.html">
 						<div class="image">
 							<iframe width="400" height="300"
@@ -777,7 +870,7 @@
 						<p class="open-text">- House Texturing -</p>
 					</a>
 
-				</li>
+				</li> -->
 
 
 
@@ -794,48 +887,10 @@
 					</li>
 				</a> -->
 
-				<li class="project-card">
-					<a href="texturing/fireVFX.html">
-						<div class="image">
-							<iframe width="400" height="300"
-								src="https://www.youtube.com/embed/cMe4Ed-nroU?autoplay=1&loop=1&playlist=cMe4Ed-nroU&controls=0&disablekb=1&modestbranding=1&mute=1"
-								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-							</iframe>
-						</div>
-						<p>Fire VFX</p>
-						<ul class="tags">
-							<li class="tag horror">Horror</li>
-							<li class="tag gameplay">Gameplay</li>
-							<li class="tag systems">Systems</li>
-							<li class="tag tool">Unity</li>
-							<li class="tag tool">C#</li>
-						</ul>
-						<p class="open-text">- Game VFX Project -</p>
-					</a>
-
-				</li>
 
 
-				<li class="project-card">
-					<a href="texturing/witchShackDiorama.html">
-						<div class="image witchShackDiorama-thumbnail">
-							<!-- <iframe width="400" height="300"
-								src="https://www.youtube.com/embed/HbSAeJEuzuw?autoplay=1&loop=1&playlist=HbSAeJEuzuw&controls=0&disablekb=1&modestbranding=1&mute=1"
-								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-							</iframe> -->
-						</div>
-						<p>Witch Shack Diorama</p>
-						<ul class="tags">
-							<li class="tag horror">Horror</li>
-							<li class="tag gameplay">Gameplay</li>
-							<li class="tag systems">Systems</li>
-							<li class="tag tool">Unity</li>
-							<li class="tag tool">C#</li>
-						</ul>
-						<p class="open-text">- Diorama -</p>
-					</a>
 
-				</li>
+
 
 				<!-- <a href="animation/ChloeAnimation.html">
 					<li class="project-card">
@@ -850,7 +905,7 @@
 					</li>
 				</a> -->
 
-				<li class="project-card">
+				<li class="project-card" data-category="web">
 					<a href="faqProject/faqProject.html">
 						<p>FAQ Project</p>
 						<ul class="tags">
@@ -867,7 +922,7 @@
 				</li>
 
 
-				<li class="project-card">
+				<li class="project-card" data-category="3D">
 					<a href="pulleyTower/pulleyTower.html">
 						<div class="image pulley-tower"></div>
 						<p>Pulley Tower</p>
@@ -891,7 +946,7 @@
 					</li>
 				</a> -->
 
-				<li class="project-card">
+				<li class="project-card" data-category="game">
 					<a href="fnaf/fnaf.html">
 						<div class="image fnaf"></div>
 						<p>Five Nights at Freddy's</p>
@@ -908,7 +963,7 @@
 				</li>
 
 
-				<li class="project-card">
+				<li class="project-card" data-category="web">
 					<a href="photography/photography.html">
 						<div class="image food-photography"></div>
 						<p>Food photography</p>

@@ -23,3 +23,25 @@ window.addEventListener("scroll", () => {
     cta.classList.add("show");
   }
 });
+//Filtering
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projects = document.querySelectorAll(".project-card");
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.filter;
+
+    filterButtons.forEach((btn) => btn.classList.remove("active"));
+    button.classList.add("active");
+
+    projects.forEach((project) => {
+      const category = project.dataset.category;
+
+      if (filter === "all" || category.includes(filter)) {
+        project.classList.remove("hide");
+      } else {
+        project.classList.add("hide");
+      }
+    });
+  });
+});
