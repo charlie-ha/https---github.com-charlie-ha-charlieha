@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="../script.js" defer></script>
+
+  <title>GDC – Portfolio</title>
+
+</head>
+<style>
+  #myWorks {
+    border-bottom: 2px solid #3081D0;
+  }
+
+  #myWorks a {
+    color: #3081D0;
+  }
+
+
+  .project-list {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 cards per row */
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+
+  .project-card {
+    background-color: rgb(77, 106, 136, 0.6);
+    border-radius: 20px;
+    color: white;
+    transition: all 0.5s ease;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .project-card a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: white;
+  }
+
+  .myWorks-nav ul li:hover {
+    background-color: rgba(53, 55, 75, 1.0);
+  }
+
+
+  .project-card h3,
+  .project-card h5,
+  .project-card p {
+    padding: 0 1rem;
+  }
+
+  .open-text {
+    margin-top: auto;
+    /* pushes description to bottom */
+    padding-bottom: 1rem;
+  }
+
+  .image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px 20px 0 0;
+    /* transition: transform 0.5s ease; */
+    overflow: hidden;
+  }
+
+  .image iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: none;
+    /* prevents weird hover issues */
+  }
+
+  .zombieVirus-thumbnail {
+    background-image: url("img/zombieVirus/zombieVirusThumbnail.webp");
+  }
+
+  .grillawarfare-thumbnail {
+    background-image: url("img/grillAWarfare/grillAWarfareThumbnail.webp");
+  }
+
+  .vrZapper-thumbnail {
+    background-image: url("img/VRZapper/vrZapperThumbSmall.webp");
+  }
+
+  .underline {
+    border-bottom: 0.25rem solid #3081d0;
+  }
+
+  .highlight {
+    font-weight: bold;
+  }
+</style>
+
+<body>
+
+  <div id="nav-placeholder"></div>
+  <article>
+
+    <div class="column">
+
+      <h2>Thanks for chatting with me at GDC!</h2>
+
+      <p>
+        I'm a game developer focused on gameplay programming, VR interaction, and atmospheric environments.
+        Here’s a quick look at my work.
+      </p>
+
+
+      <!-- VIDEO REEL -->
+      <h3 class="underline">Quick Project Reel</h3>
+
+      <div class="big-div-project-highlight">
+
+        <div class="small-div-project-highlight">
+
+          <iframe width="960" height="540" src="https://youtube.com/embed/0apzPOJ0XZw?si=0apzPOJ0XZw"
+            title="Portfolio Reel" frameborder="0" allowfullscreen>
+          </iframe>
+
+          <p class="reflection">
+            90s overview of my projects.
+          </p>
+
+        </div>
+      </div>
+
+
+      <!-- TOP PROJECTS -->
+      <h3 class="underline">Highlighted Projects</h3>
+
+      <div class="myWorks-nav">
+
+        <ul class="project-list">
+
+          <li class="project-card">
+            <a href="zombieVirus/zombieVirus.html">
+
+              <div class="image zombieVirus-thumbnail"></div>
+              <h5>Zombie Virus</h5>
+
+              <ul class="tags">
+                <li class="tag horror">Horror</li>
+                <li class="tag gameplay">Gameplay</li>
+                <li class="tag atmospheric">Atmospheric</li>
+                <li class="tag tool">Unity</li>
+                <li class="tag tool">C#</li>
+              </ul>
+
+              <p class="open-text">
+                Survival horror game with infection mechanics.
+              </p>
+
+            </a>
+          </li>
+
+
+          <li class="project-card">
+            <a href="../grillawarfare/grillawarfare.html">
+
+              <div class="image grillawarfare-thumbnail"></div>
+
+              <h5>Grill-A-Warfare</h5>
+
+              <ul class="tags">
+                <li class="tag shooter">Shooter</li>
+                <li class="tag gameplay">Gameplay</li>
+                <li class="tag tool">Unity</li>
+                <li class="tag tool">C#</li>
+              </ul>
+
+              <p class="open-text">
+                Fast-paced cooking themed shooter game.
+              </p>
+
+            </a>
+          </li>
+
+
+          <li class="project-card">
+            <a href="../vrZapper/vrZapper.html">
+
+              <div class="image vrZapper-thumbnail"></div>
+
+              <h5>VR Zapper</h5>
+
+              <ul class="tags">
+                <li class="tag gameplay">Gameplay</li>
+                <li class="tag vr">VR</li>
+                <li class="tag shooter">Shooter</li>
+                <li class="tag atmospheric">Atmospheric</li>
+                <li class="tag tool">Unity</li>
+                <li class="tag tool">C#</li>
+              </ul>
+              <p class="open-text">VR Shooting Game</p>
+
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- CONTACT -->
+      <h3 class="underline">Contact Me</h3>
+
+      <div class="big-div-project-highlight">
+
+        <div class="small-div-project-highlight">
+
+          <p>
+            If you'd like to collaborate or talk more about gameplay systems or VR interaction design, feel free to
+            reach
+            out.
+          </p>
+
+          <p class="highlight">
+            Email: <a href="mailto:charliehagamedesign@email.com">charliehagamedesign@email.com</a>
+          </p>
+
+          <p class="highlight">
+            LinkedIn:
+            <a href="https://linkedin.com/in/charlie-ha">
+              linkedin.com/in/charlie-ha
+            </a>
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- SEE MORE PROJECTS -->
+      <h3 class="underline">See More Projects</h3>
+
+      <div class="big-div-project-highlight">
+
+        <div class="small-div-project-highlight">
+
+          <p>
+            Explore the rest of my work including VR interaction systems, TouchDesigner visual experiments, and gameplay
+            prototypes.
+          </p>
+
+          <p class="highlight">
+            <a href="../myWorks.html">
+              View Full Portfolio →
+            </a>
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <script>
+      fetch("../nav.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("nav-placeholder").innerHTML = data;
+        });
+    </script>
+
+    <div id="bottom-cta-placeholder"></div>
+  </article>
+</body>
+
+</html>

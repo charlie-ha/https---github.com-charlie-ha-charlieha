@@ -54,7 +54,7 @@ h1 {
     bold 3em "Lucida Console",
     sans-serif;
   padding-top: 22px;
-  text-align: center;
+  margin: 0.5em auto 0.5em auto;
 }
 .container {
   text-align: center;
