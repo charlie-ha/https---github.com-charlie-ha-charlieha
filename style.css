@@ -16,7 +16,7 @@ nav ul {
     bold 2em Helvetica,
     Arial,
     sans-serif;
-  padding: 20px;
+  padding: 0.75em;
   position: relative;
   text-decoration: none;
   color: #3081d0;
@@ -40,6 +40,7 @@ nav ul {
 
 button {
   border-width: 2px;
+  font-size: 4em;
 }
 
 a {
@@ -53,7 +54,7 @@ h1 {
   font:
     bold 3em "Lucida Console",
     sans-serif;
-  padding-top: 22px;
+  padding-top: 1.375em;
   margin: 0.5em auto 0.5em auto;
 }
 .container {
@@ -111,7 +112,7 @@ p {
 }
 
 .cta-content h2 {
-  font-size: 2rem;
+  font-size: 2em;
   margin-bottom: 1rem;
 }
 
@@ -240,5 +241,29 @@ p {
   }
   .project-list {
     grid-template-columns: 1fr;
+  }
+  p {
+    font:
+      normal 0.75em Lato,
+      Montserrat,
+      sans-serif;
+  }
+  h2 {
+    font:
+      bold 1em "Lucida Console",
+      sans-serif;
+  }
+  button {
+    font-size: 2em;
+  }
+  .effect {
+    font:
+      bold 1.5em Helvetica,
+      Arial,
+      sans-serif;
+  }
+  .bottom-cta {
+    padding: 2em 0em;
+    font-size: 0.5em;
   }
 }

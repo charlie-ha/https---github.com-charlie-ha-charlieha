@@ -97,12 +97,25 @@
     background-image: url("img/VRZapper/vrZapperThumbSmall.webp");
   }
 
+  .logo-video {
+    justify-content: center;
+    height: auto;
+    margin: 0 auto 0 auto;
+    display: flex;
+    overflow: hidden;
+  }
+
   .underline {
     border-bottom: 0.25rem solid #3081d0;
   }
 
   .highlight {
     font-weight: bold;
+    /* color: #3081d0; */
+
+    a {
+      color: #3081d0;
+    }
   }
 </style>
 
@@ -124,9 +137,16 @@
       <!-- VIDEO REEL -->
       <h3 class="underline">Quick Project Reel</h3>
 
-      <div class="big-div-project-highlight">
 
-        <div class="small-div-project-highlight">
+
+
+      <div class="logo-video">
+        <iframe width="960" height="540"
+          src="https://www.youtube.com/embed/0apzPOJ0XZw?autoplay=1&controls=0&loop=1&playlist=0apzPOJ0XZw&modestbranding=1&mute=1"
+          frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+
+      <!-- <div class="small-div-project-highlight">
 
           <iframe width="960" height="540" src="https://youtube.com/embed/0apzPOJ0XZw?si=0apzPOJ0XZw"
             title="Portfolio Reel" frameborder="0" allowfullscreen>
@@ -136,8 +156,8 @@
             90s overview of my projects.
           </p>
 
-        </div>
-      </div>
+        </div> -->
+
 
 
       <!-- TOP PROJECTS -->
