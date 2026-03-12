@@ -50,6 +50,12 @@ a {
 img {
   width: 100%;
 }
+/* videos */
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
 h1 {
   font:
     bold 3em "Lucida Console",
@@ -63,7 +69,7 @@ h1 {
 }
 
 h2 {
-  display: inline-block;
+  display: block;
   font:
     bold 3em "Lucida Console",
     sans-serif;
@@ -210,6 +216,120 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+/* =========================
+PROJECT PAGE LAYOUT
+========================= */
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  max-width: 1100px;
+  font: normal 1rem Verdana;
+}
+
+/* two column reflection layout */
+
+.big-div-reflection {
+  display: flex;
+  gap: 2rem;
+}
+
+.div-reflection {
+  width: 49%;
+}
+
+.div-reflection .p-reflection {
+  padding-left: 2rem;
+  color: #000;
+  font: normal 1.5rem Verdana;
+  text-align: center;
+}
+
+/* image blocks */
+
+.big-img-tag {
+  display: flex;
+  justify-content: center;
+}
+
+.image-tag {
+  padding-right: 0.5rem;
+  text-align: center;
+}
+
+figcaption {
+  text-align: center;
+  padding: 1rem;
+}
+
+/* reflection text blocks */
+
+.reflection {
+  background-color: #d3dedc;
+  text-align: center;
+  padding: 1rem;
+  font: normal 1.5rem Verdana;
+  border-radius: 20px;
+}
+
+/* project highlight sections */
+
+.big-div-project-highlight {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.small-div-project-highlight {
+  max-width: 800px;
+}
+
+/* responsive videos */
+
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+/* =========================
+PROJECT PAGE TYPOGRAPHY
+========================= */
+
+h4 {
+  text-align: center;
+  padding: 2rem 0;
+  font: bold 2em Verdana;
+  color: #af1740;
+}
+
+.p-reflection {
+  padding-left: 2rem;
+  font: normal 1.5rem Verdana;
+  text-align: center;
+}
+/* =========================
+VIDEO TIMESTAMP BUTTONS
+========================= */
+
+.jump-to-button {
+  background: none;
+  font: normal 2rem Verdana;
+  cursor: pointer;
+}
+
+.timestamp {
+  color: red;
+  text-decoration: underline;
+}
+
+button:hover .timestamp {
+  font-weight: bold;
+}
 /* computer and above */
 @media only screen and (max-width: 907px) {
   nav {
@@ -248,6 +368,11 @@ p {
       Montserrat,
       sans-serif;
   }
+  h1 {
+    font:
+      bold 2em "Lucida Console",
+      sans-serif;
+  }
   h2 {
     font:
       bold 1em "Lucida Console",
@@ -265,5 +390,52 @@ p {
   .bottom-cta {
     padding: 2em 0em;
     font-size: 0.5em;
+  }
+}
+/* =========================
+TABLET
+========================= */
+
+@media only screen and (max-width: 907px) {
+  .big-div-reflection {
+    flex-direction: column;
+  }
+
+  .div-reflection {
+    width: 100%;
+  }
+
+  main {
+    font: normal 1.1rem Verdana;
+  }
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .jump-to-button {
+    font-size: 1.2rem;
   }
 }
