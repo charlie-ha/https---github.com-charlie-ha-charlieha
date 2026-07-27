@@ -366,14 +366,14 @@ VIDEO TIMESTAMP BUTTONS
 button:hover .timestamp {
   font-weight: bold;
 }
-/* computer and above */
+/* computer and below */
 @media only screen and (max-width: 907px) {
   nav {
     float: none;
   }
-  nav ul li {
+  /* nav ul li {
     width: 24%;
-  }
+  } */
   h1 {
     padding-top: 0px;
   }
@@ -424,7 +424,7 @@ button:hover .timestamp {
   }
   .effect {
     font:
-      bold 1.5em Helvetica,
+      bold 1.25em Helvetica,
       Arial,
       sans-serif;
   }
