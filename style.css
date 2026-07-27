@@ -3,6 +3,11 @@ article {
   margin: auto;
   padding: 0 2rem;
 }
+body {
+  /*styling BG*/
+  /* background: linear-gradient(180deg, #ffffff 0%, #f2f5fa 100%); */
+  background: #f4f4f6;
+}
 /* nav {
   float: right;
 } */
@@ -25,6 +30,13 @@ header {
   border: none;
   cursor: pointer;
   display: none; /* Hide on desktop */
+}
+.logo-video {
+  justify-content: center;
+  height: auto;
+  margin: 0 auto 0 auto;
+  display: flex;
+  overflow: hidden;
 }
 
 h1 {
@@ -80,7 +92,7 @@ have the underline stay visible when active class is added*/
 
 button {
   border-width: 2px;
-  font-size: 4em;
+  font-size: 2em;
 }
 
 a {
@@ -100,7 +112,7 @@ h1 {
   font:
     bold 3em "Lucida Console",
     sans-serif;
-  padding-top: 1.375em;
+  /* padding-top: 1.375em; */
   margin: 0.5em auto 0.5em auto;
 }
 .container {
@@ -115,6 +127,7 @@ h2 {
     sans-serif;
   text-align: center;
   border-bottom: 0.25rem solid #3081d0;
+  margin: 0.5em auto 0.5em auto;
 }
 h3 {
   font:
@@ -131,6 +144,15 @@ h5 {
   text-align: center;
   padding: 0;
 }
+h6 {
+  font:
+    bold 1em Lato,
+    Montserrat,
+    sans-serif;
+  margin: -1em 0 0.25em 0;
+  text-align: center;
+  padding: 0;
+}
 p {
   text-align: center;
   align-items: center;
@@ -140,7 +162,23 @@ p {
     sans-serif;
   /* margin: 0.75% 10% 0 10%; */
 }
-
+/*styling for contact icons linkedin, gmail...*/
+.contact-icon {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.colored a {
+  color: #3081d0;
+  text-decoration: underline;
+}
+.colored {
+  color: #3081d0;
+  text-decoration: underline;
+}
+/**/
 /* bottom nav styling */
 .bottom-cta {
   padding: 4rem 2rem;
