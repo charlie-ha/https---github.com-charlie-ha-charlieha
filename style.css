@@ -437,6 +437,13 @@ button:hover .timestamp {
   .jump-to-button {
     font-size: 1.2rem;
   }
+  article {
+    padding: 0 1rem;
+  }
+
+  .project-list {
+    padding: 1rem 0;
+  }
 }
 /* =========================
 TABLET
