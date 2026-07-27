@@ -25,13 +25,7 @@
 			padding-bottom: 1rem;
 		}
 
-		#profile {
-			border-bottom: 2px solid #3081D0;
-		}
 
-		#profile a {
-			color: #3081D0;
-		}
 
 		.logo-video {
 			justify-content: center;
@@ -109,6 +103,14 @@
 			.then(response => response.text())
 			.then(data => {
 				document.getElementById("nav-placeholder").innerHTML = data;
+
+				const current = window.location.pathname;
+
+				document.querySelectorAll("#navigation a").forEach(link => {
+					if (link.pathname === current) {
+						link.classList.add("active");
+					}
+				});
 			});
 	</script>
 

@@ -8,15 +8,6 @@
 	<link rel="stylesheet" href="style.css">
 	<script src="script.js" defer></script>
 	<style>
-		#myWorks {
-			border-bottom: 2px solid #3081D0;
-		}
-
-		#myWorks a {
-			color: #3081D0;
-		}
-
-
 		.project-list {
 
 			display: grid;
@@ -139,16 +130,33 @@
 			background-image: url("img/grillAWarfare/grillAWarfareThumbnail.webp");
 		}
 
-		.nanobot-thumbnail {
-			background-image: url("img/nanobotBGame/nanobotThumbnail.webp");
+		.desertTown-thumbnail {
+			background-image: url("img/ims213/desertTownThumb.webp");
 		}
 
+		.castle-thumbnail {
+			background-image: url("img/ims213/castleThumb2.webp");
+		}
+
+		.vrZapper-thumbnail {
+			background-image: url("img/VRZapper/vrZapperThumbSmall.webp");
+		}
+
+		.cageOfGuilt-thumb {
+			background-image: url("img/ims359/cageOfGuilt_thumbnail.webp");
+		}
+
+
+		/* 
+		.nanobot-thumbnail {
+		background-image: url("img/nanobotBGame/nanobotThumbnail.webp");
+		}
 		.walkcycle-thumbnail {
 			background-image: url("img/animation/walkcycleThumbnail.webp");
 			/* <iframe width="560" height="315" src="https://www.youtube.com/embed/OlNanUIKESw?si=A62ax6klDswv2KFy"
 			title="YouTube video player" frameborder="0"
 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-			referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */
+			referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
 		}
 
 		.idleAnimation-thumbnail {
@@ -175,9 +183,7 @@
 			background-image: url("img/sculpting/dragonDagger/dagger7_1.1.webp");
 		}
 
-		.cageOfGuilt-thumb {
-			background-image: url("img/ims359/cageOfGuilt_thumbnail.webp");
-		}
+		
 
 		.hand {
 			background-image: url("img/sculpting/hand/IMS215_handScreenshot1.webp");
@@ -207,17 +213,7 @@
 			background-image: url("img/texturing/witchShackDiorama/diorama_witchForestRender1.webp");
 		}
 
-		.desertTown-thumbnail {
-			background-image: url("img/ims213/desertTownThumb.webp");
-		}
-
-		.castle-thumbnail {
-			background-image: url("img/ims213/castleThumb2.webp");
-		}
-
-		.vrZapper-thumbnail {
-			background-image: url("img/VRZapper/vrZapperThumbSmall.webp");
-		}
+		
 
 		.stellaStella-thumbnail {
 			background-image: url("img/stellaStella/stellaStellaThumb.webp");
@@ -261,7 +257,7 @@
 
 		.fnaf {
 			background-image: url("img/FNAFanimatronicView.png");
-		}
+		} */
 
 
 
@@ -301,9 +297,8 @@
 		<div class="filter-bar">
 			<button class="filter-btn active" data-filter="all">All</button>
 			<button class="filter-btn" data-filter="game">Games</button>
-			<button class="filter-btn" data-filter="vr">VR / Interactive</button>
+			<button class="filter-btn" data-filter="vr">VR </button>
 			<button class="filter-btn" data-filter="3D">3D / Animation</button>
-			<button class="filter-btn" data-filter="web">Web / UI</button>
 		</div>
 
 		<div class="myWorks-nav">
@@ -401,23 +396,24 @@
 				</li>
 
 
-				<!-- <li class="project-card" data-category="game">
+				<!-- removed projects that are not games
+				<li class="project-card" data-category="game">
 					<a href="coastalCombat/coastalCombat.html">
 						<div class="image coastalCombat-thumbnail"></div>
 						<h5>Coastal Combat⚡️</p>
-						<ul class="tags">
-							<li class="tag horror">Horror</li>
-							<li class="tag gameplay">Gameplay</li>
-							<li class="tag systems">Systems</li>
-							<li class="tag tool">Unity</li>
-							<li class="tag tool">C#</li>
-						</ul>
-						<p class="open-text">2D Shoot them up</p>
+							<ul class="tags">
+								<li class="tag horror">Horror</li>
+								<li class="tag gameplay">Gameplay</li>
+								<li class="tag systems">Systems</li>
+								<li class="tag tool">Unity</li>
+								<li class="tag tool">C#</li>
+							</ul>
+							<p class="open-text">2D Shoot them up</p>
 					</a>
 
 				</li> -->
 
-
+				<!-- 				
 				<li class="project-card" data-category="3D">
 					<a href="ims359/emotionalMontage.html">
 						<div class="image emotionalMontage-thumbnail"></div>
@@ -430,7 +426,7 @@
 						<p class="open-text">Emotional Montage</p>
 					</a>
 
-				</li>
+				</li> 
 
 
 
@@ -438,103 +434,103 @@
 				<li class="project-card" data-category="3D">
 					<a href="texturing/witchShackDiorama.html">
 						<div class="image witchShackDiorama-thumbnail">
-							<!-- <iframe width="400" height="300"
+							 <iframe width="400" height="300"
 								src="https://www.youtube.com/embed/HbSAeJEuzuw?autoplay=1&loop=1&playlist=HbSAeJEuzuw&controls=0&disablekb=1&modestbranding=1&mute=1"
 								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-							</iframe> -->
-						</div>
-						<h5>Witch Shack Diorama</h5>
-						<ul class="tags">
-							<li class="tag atmospheric">Atmospheric</li>
-							<li class="tag tool">Maya</li>
-						</ul>
-						<p class="open-text">Diorama</p>
-					</a>
+							</iframe> 
+		</div>
+		<h5>Witch Shack Diorama</h5>
+		<ul class="tags">
+			<li class="tag atmospheric">Atmospheric</li>
+			<li class="tag tool">Maya</li>
+		</ul>
+		<p class="open-text">Diorama</p>
+		</a>
 
-				</li>
-				<li class="project-card" data-category="3D">
-					<a href="texturing/fireVFX.html">
-						<div class="image">
-							<iframe width="400" height="300"
-								src="https://www.youtube.com/embed/cMe4Ed-nroU?autoplay=1&loop=1&playlist=cMe4Ed-nroU&controls=0&disablekb=1&modestbranding=1&mute=1"
-								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-							</iframe>
-						</div>
-						<h5>Fire VFX</h5>
-						<ul class="tags">
-							<li class="tag atmospheric">Atmospheric</li>
-							<li class="tag tool">Unity</li>
-						</ul>
-						<p class="open-text">Game VFX Project</p>
-					</a>
+		</li>
+		<li class="project-card" data-category="3D">
+			<a href="texturing/fireVFX.html">
+				<div class="image">
+					<iframe width="400" height="300"
+						src="https://www.youtube.com/embed/cMe4Ed-nroU?autoplay=1&loop=1&playlist=cMe4Ed-nroU&controls=0&disablekb=1&modestbranding=1&mute=1"
+						title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+					</iframe>
+				</div>
+				<h5>Fire VFX</h5>
+				<ul class="tags">
+					<li class="tag atmospheric">Atmospheric</li>
+					<li class="tag tool">Unity</li>
+				</ul>
+				<p class="open-text">Game VFX Project</p>
+			</a>
 
-				</li>
-				<li class="project-card" data-category="3D">
-					<a href="ims359/stellaStella.html">
-						<div class="image stellaStella-thumbnail"></div>
-						<h5>Stellar Stellar</h5>
-						<ul class="tags">
-							<li class="tag tool">After Effects</li>
-						</ul>
-						<p class="open-text">Fan Made Music Video</p>
-					</a>
+		</li>
+		<li class="project-card" data-category="3D">
+			<a href="ims359/stellaStella.html">
+				<div class="image stellaStella-thumbnail"></div>
+				<h5>Stellar Stellar</h5>
+				<ul class="tags">
+					<li class="tag tool">After Effects</li>
+				</ul>
+				<p class="open-text">Fan Made Music Video</p>
+			</a>
 
-				</li>
-
-
-				<li class="project-card" data-category="web">
-					<a href="ims322/productCatalog.html">
-						<div class="image productCatalog-thumbnail"></div>
-						<h5>Chess Galaxy</h5>
-						<ul class="tags">
-							<li class="tag tool">html</li>
-							<li class="tag tool">css</li>
-							<li class="tag tool">js</li>
-						</ul>
-						<p class="open-text">Chess Store Website</p>
-					</a>
-
-				</li>
-
-				<li class="project-card" data-category="web">
-					<a href="ims322/profileCreator.html">
-						<div class="image profileCreator-thumbnail"></div>
-						<h5>Chess Profile Creator</h5>
-						<ul class="tags">
-							<li class="tag tool">html</li>
-							<li class="tag tool">css</li>
-							<li class="tag tool">js</li>
-						</ul>
-						<p class="open-text">Profile Creator Website</p>
-					</a>
-
-				</li>
+		</li>
 
 
+		<li class="project-card" data-category="web">
+			<a href="ims322/productCatalog.html">
+				<div class="image productCatalog-thumbnail"></div>
+				<h5>Chess Galaxy</h5>
+				<ul class="tags">
+					<li class="tag tool">html</li>
+					<li class="tag tool">css</li>
+					<li class="tag tool">js</li>
+				</ul>
+				<p class="open-text">Chess Store Website</p>
+			</a>
+
+		</li>
+
+		<li class="project-card" data-category="web">
+			<a href="ims322/profileCreator.html">
+				<div class="image profileCreator-thumbnail"></div>
+				<h5>Chess Profile Creator</h5>
+				<ul class="tags">
+					<li class="tag tool">html</li>
+					<li class="tag tool">css</li>
+					<li class="tag tool">js</li>
+				</ul>
+				<p class="open-text">Profile Creator Website</p>
+			</a>
+
+		</li>
 
 
-				<li class="project-card" data-category="web">
-					<a href="musicPlayer/musicPlayerProject.html">
-						<div class="image music-player"></div>
-						<h5>Music Player Project</h5>
-						<ul class="tags">
-							<li class="tag tool">Illustrator</li>
-							<li class="tag tool">html</li>
-							<li class="tag tool">css</li>
-							<li class="tag tool">js</li>
-						</ul>
-						<p class="open-text">Playable Music Player</p>
-					</a>
 
-				</li>
 
-				<!-- <a href="nanobot/nanobot.html">
+		<li class="project-card" data-category="web">
+			<a href="musicPlayer/musicPlayerProject.html">
+				<div class="image music-player"></div>
+				<h5>Music Player Project</h5>
+				<ul class="tags">
+					<li class="tag tool">Illustrator</li>
+					<li class="tag tool">html</li>
+					<li class="tag tool">css</li>
+					<li class="tag tool">js</li>
+				</ul>
+				<p class="open-text">Playable Music Player</p>
+			</a>
+
+		</li>
+
+		 <a href="nanobot/nanobot.html">
 					<li class="project-card">
 						<div class="image nanobot-thumbnail"></div>
 						<h5>Nanobots</p>
 						<p class="open-text">Board game</p>
 					</li>
-				</a> -->
+				</a> 
 
 				<li class="project-card" data-category="3D">
 					<a href="animation/walkcycle.html">
@@ -625,7 +621,8 @@
 				</li>
 
 
-				<!-- <a href="sculpting/propRock.html">
+
+				<a href="sculpting/propRock.html">
 					<li class="project-card">
 						<div class="image propRock-thumbnail">
 							<iframe width="400" height="300"
@@ -634,7 +631,7 @@
 							</iframe>
 						</div>
 						<h5>Environment Prop Rock</p>
-						<p class="open-text">Rock Sculpting project</p>
+							<p class="open-text">Rock Sculpting project</p>
 					</li>
 				</a>
 				<a href="sculpting/obsidian.html">
@@ -646,9 +643,9 @@
 							</iframe>
 						</div>
 						<h5> Obsidian</p>
-						<p class="open-text">Rock Sculpting project</p>
+							<p class="open-text">Rock Sculpting project</p>
 					</li>
-				</a> -->
+				</a>
 
 				<li class="project-card" data-category="3D">
 					<a href="sculpting/direWolf.html">
@@ -687,7 +684,7 @@
 				</li>
 
 
-				<!-- <li class="project-card" data-category="3D">
+				<li class="project-card" data-category="3D">
 					<a href="sculpting/dragonDagger.html">
 						<div class="image dragonDagger-thumbnail">
 
@@ -703,7 +700,7 @@
 						<p class="open-text">Hard surface Sculpt</p>
 					</a>
 
-				</li> -->
+				</li>
 
 
 				<li class="project-card" data-category="3D">
@@ -723,10 +720,10 @@
 				<li class="project-card" data-category="3D">
 					<a href="sculpting/rustyDoor.html">
 						<div class="image rustyDoor-thumbnail">
-							<!-- <iframe width="400" height="300"
+							<iframe width="400" height="300"
 								src="https://www.youtube.com/embed/yAOj7QfKmOU?autoplay=1&loop=1&playlist=yAOj7QfKmOU&controls=0&disablekb=1&modestbranding=1&mute=1"
 								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-							</iframe> -->
+							</iframe>
 						</div>
 						<h5>Rusty Door</h5>
 						<ul class="tags">
@@ -740,26 +737,26 @@
 				</li>
 
 
-				<!-- <li class="project-card" data-category="3D">
+				<li class="project-card" data-category="3D">
 					<a href="texturing/treasureChest.html">
 						<div class="image treasureChest-thumbnail">
-							 <iframe width="400" height="300"
+							<iframe width="400" height="300"
 								src="https://www.youtube.com/embed/Chl1_WbJE-E?autoplay=1&loop=1&playlist=Chl1_WbJE-E&controls=0&disablekb=1&modestbranding=1&mute=1"
 								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-							</iframe> 
-					</div>
-					<h5>Golden Treasure Chest</h5>
-					<ul class="tags">
-						<li class="tag horror">Horror</li>
-						<li class="tag gameplay">Gameplay</li>
-						<li class="tag systems">Systems</li>
-						<li class="tag tool">Unity</li>
-						<li class="tag tool">C#</li>
-					</ul>
-					<p class="open-text">Container Texturing</h5>
+							</iframe>
+						</div>
+						<h5>Golden Treasure Chest</h5>
+						<ul class="tags">
+							<li class="tag horror">Horror</li>
+							<li class="tag gameplay">Gameplay</li>
+							<li class="tag systems">Systems</li>
+							<li class="tag tool">Unity</li>
+							<li class="tag tool">C#</li>
+						</ul>
+						<p class="open-text">Container Texturing</h5>
 					</a>
 
-					</li> -->
+				</li> -->
 
 
 				<!-- <li class="project-card" data-category="3D">
@@ -836,7 +833,7 @@
 						<h5>Chloe Saves The Day</p>
 						<p class="open-text">Animation project</p>
 					</li>
-				</a> -->
+				</a> 
 
 				<li class="project-card" data-category="web">
 					<a href="faqProject/faqProject.html">
@@ -866,13 +863,13 @@
 
 				</li>
 
-				<!-- <a href="foodCart/foodCart.html">
+				 <a href="foodCart/foodCart.html">
 					<li class="project-card">
 						<div class="image food-cart"></div>
 						<h5>Food Cart</h5>
 						<p class="open-text">3D model a Food Cart</p>
 					</li>
-				</a> -->
+				</a> 
 
 				<li class="project-card" data-category="game">
 					<a href="fnaf/fnaf.html">
@@ -910,7 +907,7 @@
 						<p class="open-text">Each layer is a story</p>
 					</a>
 
-				</li>
+				</li>-->
 
 
 			</ul>
@@ -924,6 +921,14 @@
 			.then(response => response.text())
 			.then(data => {
 				document.getElementById("nav-placeholder").innerHTML = data;
+
+				const current = window.location.pathname;
+
+				document.querySelectorAll("#navigation a").forEach(link => {
+					if (link.pathname === current) {
+						link.classList.add("active");
+					}
+				});
 			});
 	</script>
 

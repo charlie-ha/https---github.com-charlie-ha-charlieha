@@ -1,10 +1,11 @@
 function menu() {
-  var x = document.getElementById("navigation");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
+  // var x = document.getElementById("navigation");
+  // if (x.style.display === "block") {
+  //   x.style.display = "none";
+  // } else {
+  //   x.style.display = "block";
+  // }
+  document.getElementById("navigation").classList.toggle("show");
 }
 // Load Bottom CTA
 fetch("../bottomNav.html")

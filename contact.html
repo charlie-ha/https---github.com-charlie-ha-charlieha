@@ -10,72 +10,8 @@
 	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
 	<style>
-		/* article {
-				width: 80%;
-			}
-			nav {
-				float: right;
-			}
-			nav ul {
-				display: flex;
-				list-style-type: none;
-				margin: 0px;
-				
-				
-			}
-			
-			.effect {
-				font: bold 1em Helvetica, Arial, sans-serif;
-				padding: 20px;
-				position: relative;
-				text-decoration: none;
-				color: #3081D0;
-			}
-			.effect::after {
-				content: "";
- 				position: absolute;
-  				bottom: -3px;
-  				left: 50%;
-  				width: 0;
-  				height: 2px;
-  				background-color: #3081D0;
-  				transition: width 0.3s ease, left 0.3s ease;
-			}
-			.effect:hover::after{
-				
-				width: 100%;
-    			left: 0;
-
-			}
-			a {
-				text-decoration: none;
-				color: black;
-			} 
-			
-			h1 {
-				font: bold 1.5em "Lucida Console", sans-serif; 
-				padding-top: 22px;
-				padding-left: 5%;
-			}
-			h2 {
-				font: bold 3em "Lucida Console", sans-serif; 
-				text-align: center;
-			} */
 		p {
 			text-align: center;
-		}
-
-		#contact {
-			border-bottom: 2px solid #3081D0;
-
-		}
-
-		#contact a {
-			color: #3081D0;
-		}
-
-		#colored {
-			color: #3081D0
 		}
 	</style>
 
@@ -95,25 +31,7 @@
 
 <body>
 
-	<header>
-		<div class="topnav">
-			<button style="font-size:4em"><a href="javascript:void(0);" class="icon" onclick="menu();"><i
-						class="fa fa-bars"></i></a></button>
-			<nav id="navigation">
-				<ul>
-					<li class="effect"><a href="index.html">Profile</a></li>
-					<li id="myWorks" class="effect"><a href="myWorks.html">Projects</a></li>
-
-					<li id="contact" class="effect"><a href="contact.html"> Contact </a></li>
-
-				</ul>
-			</nav>
-
-		</div>
-		<h1><a href="index.html">CHARLIE HA</a></h1>
-
-	</header>
-
+	<div id="nav-placeholder"></div>
 
 	<article>
 		<div class="container">
@@ -141,7 +59,21 @@
 	</article>
 
 
+	<script>
+		fetch("nav.html")
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById("nav-placeholder").innerHTML = data;
 
+				const current = window.location.pathname;
+
+				document.querySelectorAll("#navigation a").forEach(link => {
+					if (link.pathname === current) {
+						link.classList.add("active");
+					}
+				});
+			});
+	</script>
 </body>
 
 </html>
