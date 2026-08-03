@@ -1,0 +1,109 @@
+<html>
+
+<head>
+  <title>Charlie's Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+  <style>
+    article {
+
+      background-image: url("");
+      background-size: 100% auto;
+      background-repeat: none;
+    }
+
+    img {
+      image-repeat: none;
+    }
+
+    p {
+      margin: 0.75% 15% 0 15%;
+      padding-bottom: 1rem;
+    }
+
+
+
+    /* .logo-video {
+			justify-content: center;
+			height: auto;
+			margin: 0 auto 0 auto;
+			display: flex;
+			overflow: hidden;
+		} */
+  </style>
+
+
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NM2B64ZJXM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'G-NM2B64ZJXM');
+</script>
+
+<body>
+
+
+  <div id="nav-placeholder"></div>
+
+  <article>
+    <!-- <div class="logo-video">
+			<iframe width="960" height="540"
+				src="https://www.youtube.com/embed/3V3qbTQD_2I?autoplay=1&controls=0&loop=1&playlist=3V3qbTQD_2I&modestbranding=1&mute=0"
+				frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div> -->
+    <div class="container">
+      <h2>About Me</h2>
+    </div>
+
+    <div></div>
+    <p> Hi, I'm Charlie. I'm a programmer, designer, and a video editor. </p>
+    <p>I hold a profound passion for the gaming industry, where my skills in drawing, designing, voice acting, and video
+      editing come together effortlessly. I thrive in an environment that challenges me to innovate and thrive. </p>
+    <p>I am not just a creator; I am a storyteller, an artist, and a problem-solver, eager to contribute my unique set
+      of skills to the vibrant video game world. </p>
+
+    <div class="container">
+      <h2>Skills</h2>
+      <p>Maya, Unity, Unreal Engine, Blender, TouchDesigner, Adobe Creative Apps (Illustrator, Premier Pro
+        etc.).</p>
+    </div>
+  </article>
+
+  <!-- consistent top nav across pages -->
+  <script>
+    fetch("nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+
+        const current = window.location.pathname;
+
+        document.querySelectorAll("#navigation a").forEach(link => {
+          if (link.pathname === current) {
+            link.classList.add("active");
+          }
+        });
+      });
+  </script>
+
+  <!-- bottom nav -->
+  <div id="bottom-cta-placeholder"></div>
+
+</body>
+
+</html>
+<!--Citations 
+"How TO- Mobile Navigation Menu", w3schools, https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+
+-->

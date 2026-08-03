@@ -1,0 +1,964 @@
+<html>
+
+<head>
+  <title>Charlie Ha's Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <style>
+    .project-list {
+
+      display: grid;
+      /* grid-template-columns: repeat(3, 1fr); */
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      /*remove default margin and padding */
+      margin: 0;
+      list-style: none;
+
+      /* 3 cards per row */
+      gap: 2rem;
+      /* padding: 2rem; */
+
+    }
+
+
+
+    .project-card {
+      background-color: rgb(77, 106, 136, 0.6);
+      border-radius: 20px;
+      color: white;
+      transition: all 0.5s ease;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card a {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      color: white;
+    }
+
+    /* filtering animation */
+    .project-card.hide {
+
+      opacity: 0;
+      transform: scale(.9);
+
+      pointer-events: none;
+      display: none;
+    }
+
+    /* filter styling */
+    .filter-bar {
+      justify-content: center;
+      display: flex;
+      gap: 12px;
+
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+
+      background: rgba(70, 70, 70, 0.6);
+      color: white;
+
+      border: none;
+      padding: 8px 18px;
+
+      border-radius: 20px;
+
+      cursor: pointer;
+
+      transition: all .3s ease;
+    }
+
+    .filter-btn:hover {
+
+      background: rgba(120, 120, 120, 0.6);
+    }
+
+    .filter-btn.active {
+
+      background: rgb(120, 180, 255);
+      color: black;
+    }
+
+
+    .myWorks-nav ul li:hover {
+      background-color: rgba(53, 55, 75, 1.0);
+    }
+
+
+    .project-card h3,
+    .project-card h5,
+    .project-card p {
+      padding: 0 1rem;
+    }
+
+    .open-text {
+      margin-top: auto;
+      /* pushes description to bottom */
+      padding-bottom: 1rem;
+    }
+
+    .image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background-size: cover;
+      background-position: center;
+      border-radius: 20px 20px 0 0;
+      /* transition: transform 0.5s ease; */
+      overflow: hidden;
+    }
+
+    .image iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      pointer-events: none;
+      /* prevents weird hover issues */
+    }
+
+    .music-player {
+      background-image: url("img/bandCover.webp");
+    }
+
+    .zombieVirus-thumbnail {
+      background-image: url("img/zombieVirus/zombieVirusThumbnail.webp");
+    }
+
+    .grillawarfare-thumbnail {
+      background-image: url("img/grillAWarfare/grillAWarfareThumbnail.webp");
+    }
+
+    .desertTown-thumbnail {
+      background-image: url("img/ims213/desertTownThumb.webp");
+    }
+
+    .castle-thumbnail {
+      background-image: url("img/ims213/castleThumb2.webp");
+    }
+
+    .vrZapper-thumbnail {
+      background-image: url("img/VRZapper/vrZapperThumbSmall.webp");
+    }
+
+    .cageOfGuilt-thumb {
+      background-image: url("img/ims359/cageOfGuilt_thumbnail.webp");
+    }
+
+
+    /* 
+		.nanobot-thumbnail {
+		background-image: url("img/nanobotBGame/nanobotThumbnail.webp");
+		}
+		.walkcycle-thumbnail {
+			background-image: url("img/animation/walkcycleThumbnail.webp");
+			/* <iframe width="560" height="315" src="https://www.youtube.com/embed/OlNanUIKESw?si=A62ax6klDswv2KFy"
+			title="YouTube video player" frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+		}
+
+		.idleAnimation-thumbnail {
+			background-image: url("img/animation/idleThumbnail.webp");
+		}
+
+		.dialogueAnimation-thumbnail {
+			background-image: url("img/animation/dialogueThumbnail.webp");
+		}
+
+		.mocapAnimation-thumbnail {
+			background-image: url("img/animation/mocapThumbnail.webp");
+		}
+
+		.chessKingSacAnimation-thumbnail {
+			background-image: url("img/animation/chesskingThumbnail.webp");
+		}
+
+		.ChloeAnimation-thumbnail {
+			background-image: url("img/animation/chloeThumbnail.webp");
+		}
+
+		.dragonDagger-thumbnail {
+			background-image: url("img/sculpting/dragonDagger/dagger7_1.1.webp");
+		}
+
+		
+
+		.hand {
+			background-image: url("img/sculpting/hand/IMS215_handScreenshot1.webp");
+		}
+
+		.treasureChest-thumbnail {
+			background-image: url("img/texturing/treasureChest/goldenTreasureChestRender3.webp");
+		}
+
+		.rustyDoor-thumbnail {
+			background-image: url("img/sculpting/rustyDoor/rustyDoor_1.3.webp");
+		}
+
+		.pineTree-thumbnail {
+			background-image: url("img/texturing/pineTree/newPaintedPineTreeAngle9.webp");
+		}
+
+		.shack-thumbnail {
+			background-image: url("img/texturing/pineTree/newPaintedPineTreeAngle9.webp");
+		}
+
+		.witchShackEnvi-thumbnail {
+			background-image: url("img/texturing/witchShackEnvironment/diorama_witchForest8_1.1.webp");
+		}
+
+		.witchShackDiorama-thumbnail {
+			background-image: url("img/texturing/witchShackDiorama/diorama_witchForestRender1.webp");
+		}
+
+		
+
+		.stellaStella-thumbnail {
+			background-image: url("img/stellaStella/stellaStellaThumb.webp");
+		}
+
+		.emotionalMontage-thumbnail {
+			background-image: url("img/ims359/emotionalMontageThumb.webp");
+		}
+
+		.productCatalog-thumbnail {
+			background-image: url("img/ims322/chessGalaxyThumb.webp");
+		}
+
+		.profileCreator-thumbnail {
+			background-image: url("img/ims322/profileCreator/profileCreatorThumb.webp");
+		}
+
+		.coastalCombat-thumbnail {
+			background-image: url("img/coastalCombat/coastalCombatThumb.webp");
+		}
+
+		.faq {
+			background-image: url("img/faqCover.png");
+		}
+
+		.pulley-tower {
+			background-image: url("img/IMS319_Spring2024_CharlieHa_PulleyTowerTextured10.png");
+		}
+
+		.food-cart {
+			background-image: url("img/CharlieHa_FoodCart1.png");
+		}
+
+		.food-photography {
+			background-image: url("img/cheese.jpg");
+		}
+
+		.podcast {
+			background-image: url("img/podcastLogo.png");
+		}
+
+		.fnaf {
+			background-image: url("img/FNAFanimatronicView.png");
+		} */
+
+
+
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+  </style>
+
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NM2B64ZJXM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'G-NM2B64ZJXM');
+</script>
+
+<body>
+
+  <div id="nav-placeholder"></div>
+  <section class="hero">
+    <div class="hero-text">
+      <p class="hero-intro">
+        I build gameplay systems, AI, and immersive horror experiences
+        using Unity and C#.
+      </p>
+
+      <a href="files/Charlie Ha Resume Jul292026.pdf" class="resume-btn" download>
+        Download Resume
+      </a>
+    </div>
+  </section>
+  <div class="logo-video">
+    <iframe
+      src="https://www.youtube.com/embed/3V3qbTQD_2I?autoplay=1&controls=1&loop=1&playlist=3V3qbTQD_2I&modestbranding=1&mute=0"
+      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <article>
+
+
+    <div class="container">
+      <h2>Featured Projects</h2>
+    </div>
+    <!-- filter bar for viewer to choose -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="game">Games</button>
+      <button class="filter-btn" data-filter="vr">VR </button>
+      <button class="filter-btn" data-filter="3D">3D / Animation</button>
+    </div>
+
+    <div class="myWorks-nav">
+      <ul class="project-list">
+
+        <li class="project-card" data-category="game">
+          <a href="zombieVirus/zombieVirus.html">
+            <div class="image zombieVirus-thumbnail"></div>
+            <h5>Zombie Virus</h5>
+            <ul class="tags">
+              <li class="tag horror">Horror</li>
+              <li class="tag gameplay">Gameplay</li>
+              <li class="tag atmospheric">Atmospheric</li>
+              <li class="tag shooter">Shooter</li>
+              <li class="tag tool">Unity</li>
+              <li class="tag tool">C#</li>
+            </ul>
+            <p class="open-text">Horror game in Unity</p>
+          </a>
+        </li>
+
+
+        <li class="project-card" data-category="game">
+          <a href="grillawarfare/grillawarfare.html">
+            <div class="image grillawarfare-thumbnail"></div>
+            <h5>Grill-A-Warfare</h5>
+            <ul class="tags">
+              <li class="tag gameplay">Gameplay</li>
+              <li class="tag shooter">Shooter</li>
+              <li class="tag atmospheric">Atmospheric</li>
+              <li class="tag tool">Unity</li>
+              <li class="tag tool">C#</li>
+            </ul>
+            <p class="open-text">Cooking-themed Shooter Game</p>
+          </a>
+        </li>
+
+
+        <li class="project-card" data-category="game vr">
+          <a href="VRZapper/vrZapper.html">
+            <div class="image vrZapper-thumbnail"></div>
+            <h5>VR Zapper</h5>
+            <ul class="tags">
+              <li class="tag gameplay">Gameplay</li>
+              <li class="tag vr">VR</li>
+              <li class="tag shooter">Shooter</li>
+              <li class="tag atmospheric">Atmospheric</li>
+              <li class="tag tool">Unity</li>
+              <li class="tag tool">C#</li>
+            </ul>
+            <p class="open-text">VR Shooting Game</p>
+          </a>
+
+        </li>
+        <li class="project-card" data-category="3D">
+          <a href="ims359/cageOfGuilt.html">
+            <div class="image cageOfGuilt-thumb"></div>
+            <h5>The Cage Of Guilt</h5>
+            <ul class="tags">
+              <li class="tag horror">Horror</li>
+              <li class="tag tool">Blender</li>
+              <li class="tag tool">Substance Painter</li>
+            </ul>
+            <p class="open-text">Silent-Hill inspired Animation</p>
+          </a>
+
+        </li>
+
+        <li class="project-card" data-category="3D">
+          <a href="ims213/castle.html">
+            <div class="image castle-thumbnail"></div>
+            <h5>The Bloodmoon Castle</h5>
+            <ul class="tags">
+              <li class="tag atmospheric">Atmospheric</li>
+              <li class="tag tool">Unreal</li>
+            </ul>
+            <p class="open-text">A Castle Kitbash</p>
+          </a>
+
+        </li>
+
+
+        <li class="project-card" data-category="game">
+          <a href="ims213/desertTown.html">
+            <div class="image desertTown-thumbnail"></div>
+            <h5>Desert Town</h5>
+            <ul class="tags">
+              <li class="tag gameplay">Gameplay</li>
+              <li class="tag tool">Unreal</li>
+              <li class="tag tool">Blueprint</li>
+            </ul>
+            <p class="open-text">Murder Mystery Game</p>
+          </a>
+
+        </li>
+
+
+        <!-- removed projects that are not games
+				<li class="project-card" data-category="game">
+					<a href="coastalCombat/coastalCombat.html">
+						<div class="image coastalCombat-thumbnail"></div>
+						<h5>Coastal Combat⚡️</p>
+							<ul class="tags">
+								<li class="tag horror">Horror</li>
+								<li class="tag gameplay">Gameplay</li>
+								<li class="tag systems">Systems</li>
+								<li class="tag tool">Unity</li>
+								<li class="tag tool">C#</li>
+							</ul>
+							<p class="open-text">2D Shoot them up</p>
+					</a>
+
+				</li> -->
+
+        <!-- 				
+				<li class="project-card" data-category="3D">
+					<a href="ims359/emotionalMontage.html">
+						<div class="image emotionalMontage-thumbnail"></div>
+						<h5>Unsettling Feeling</h5>
+						<ul class="tags">
+							<li class="tag horror">Horror</li>
+							<li class="tag atmospheric">Atmospheric</li>
+							<li class="tag tool">Premier Pro</li>
+						</ul>
+						<p class="open-text">Emotional Montage</p>
+					</a>
+
+				</li> 
+
+
+
+
+				<li class="project-card" data-category="3D">
+					<a href="texturing/witchShackDiorama.html">
+						<div class="image witchShackDiorama-thumbnail">
+							 <iframe width="400" height="300"
+								src="https://www.youtube.com/embed/HbSAeJEuzuw?autoplay=1&loop=1&playlist=HbSAeJEuzuw&controls=0&disablekb=1&modestbranding=1&mute=1"
+								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							</iframe> 
+		</div>
+		<h5>Witch Shack Diorama</h5>
+		<ul class="tags">
+			<li class="tag atmospheric">Atmospheric</li>
+			<li class="tag tool">Maya</li>
+		</ul>
+		<p class="open-text">Diorama</p>
+		</a>
+
+		</li>
+		<li class="project-card" data-category="3D">
+			<a href="texturing/fireVFX.html">
+				<div class="image">
+					<iframe width="400" height="300"
+						src="https://www.youtube.com/embed/cMe4Ed-nroU?autoplay=1&loop=1&playlist=cMe4Ed-nroU&controls=0&disablekb=1&modestbranding=1&mute=1"
+						title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+					</iframe>
+				</div>
+				<h5>Fire VFX</h5>
+				<ul class="tags">
+					<li class="tag atmospheric">Atmospheric</li>
+					<li class="tag tool">Unity</li>
+				</ul>
+				<p class="open-text">Game VFX Project</p>
+			</a>
+
+		</li>
+		<li class="project-card" data-category="3D">
+			<a href="ims359/stellaStella.html">
+				<div class="image stellaStella-thumbnail"></div>
+				<h5>Stellar Stellar</h5>
+				<ul class="tags">
+					<li class="tag tool">After Effects</li>
+				</ul>
+				<p class="open-text">Fan Made Music Video</p>
+			</a>
+
+		</li>
+
+
+		<li class="project-card" data-category="web">
+			<a href="ims322/productCatalog.html">
+				<div class="image productCatalog-thumbnail"></div>
+				<h5>Chess Galaxy</h5>
+				<ul class="tags">
+					<li class="tag tool">html</li>
+					<li class="tag tool">css</li>
+					<li class="tag tool">js</li>
+				</ul>
+				<p class="open-text">Chess Store Website</p>
+			</a>
+
+		</li>
+
+		<li class="project-card" data-category="web">
+			<a href="ims322/profileCreator.html">
+				<div class="image profileCreator-thumbnail"></div>
+				<h5>Chess Profile Creator</h5>
+				<ul class="tags">
+					<li class="tag tool">html</li>
+					<li class="tag tool">css</li>
+					<li class="tag tool">js</li>
+				</ul>
+				<p class="open-text">Profile Creator Website</p>
+			</a>
+
+		</li>
+
+
+
+
+		<li class="project-card" data-category="web">
+			<a href="musicPlayer/musicPlayerProject.html">
+				<div class="image music-player"></div>
+				<h5>Music Player Project</h5>
+				<ul class="tags">
+					<li class="tag tool">Illustrator</li>
+					<li class="tag tool">html</li>
+					<li class="tag tool">css</li>
+					<li class="tag tool">js</li>
+				</ul>
+				<p class="open-text">Playable Music Player</p>
+			</a>
+
+		</li>
+
+		 <a href="nanobot/nanobot.html">
+					<li class="project-card">
+						<div class="image nanobot-thumbnail"></div>
+						<h5>Nanobots</p>
+						<p class="open-text">Board game</p>
+					</li>
+				</a> 
+
+				<li class="project-card" data-category="3D">
+					<a href="animation/walkcycle.html">
+						<div class="image walkcycle-thumbnail">
+							<iframe width="400" height="300"
+								src="https://www.youtube.com/embed/OlNanUIKESw?autoplay=1&loop=1&playlist=OlNanUIKESw&controls=0&disablekb=1&modestbranding=1&mute=1"
+								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							</iframe>
+						</div>
+						<h5>Drunk & Vanilla Walk Cycles</h5>
+						<ul class="tags">
+							<li class="tag tool">Maya</li>
+						</ul>
+						<p class="open-text">Animation projects</p>
+					</a>
+
+				</li>
+
+
+				<li class="project-card" data-category="3D">
+					<a href="animation/idleAnimation.html">
+						<div class="image idleAnimation-thumbnail">
+							<iframe width="400" height="300"
+								src="https://www.youtube.com/embed/_byGVS5i-io?autoplay=1&loop=1&playlist=_byGVS5i-io&controls=0&disablekb=1&modestbranding=1&mute=1"
+								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							</iframe>
+						</div>
+						<h5>Curious & Carefree Idle</h5>
+						<ul class="tags">
+							<li class="tag tool">Maya</li>
+						</ul>
+						<p class="open-text">Animation projects</p>
+					</a>
+
+				</li>
+
+				<li class="project-card" data-category="3D">
+					<a href="animation/dialogueAnimation.html">
+						<div class="image dialogueAnimation-thumbnail">
+							<iframe width="400" height="300"
+								src="https://www.youtube.com/embed/iwgB5H_g8h0?autoplay=1&loop=1&playlist=iwgB5H_g8h0&controls=0&disablekb=1&modestbranding=1&mute=1"
+								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							</iframe>
+						</div>
+						<h5>Takes Takes Takes</h5>
+						<ul class="tags">
+							<li class="tag tool">Maya</li>
+						</ul>
+						<p class="open-text">Animation project</p>
+					</a>
+
+				</li>
+
+
+				<li class="project-card" data-category="3D">
+					<a href="animation/mocapAnimation.html">
+						<div class="image mocapAnimation-thumbnail">
+							<iframe width="400" height="300"
+								src="https://www.youtube.com/embed/IKUNMqrCXFE?autoplay=1&loop=1&playlist=IKUNMqrCXFE&controls=0&disablekb=1&modestbranding=1&mute=1"
+								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							</iframe>
+						</div>
+						<h5>Opening Portal - Dr.Strange Style</h5>
+						<ul class="tags">
+							<li class="tag tool">Maya</li>
+						</ul>
+						<p class="open-text">MoCap Animation project</p>
+					</a>
+
+				</li>
+
+
+				<li class="project-card" data-category="3D">
+					<a href="animation/chessKingSacAnimation.html">
+						<div class="image chessKingSacAnimation-thumbnail">
+							<iframe width="400" height="300"
+								src="https://www.youtube.com/embed/Vtc6CRYwDKA?autoplay=1&loop=1&playlist=Vtc6CRYwDKA&controls=0&disablekb=1&modestbranding=1&mute=1"
+								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							</iframe>
+						</div>
+						<h5>Chess King Sacrifice</h5>
+						<ul class="tags">
+							<li class="tag tool">Maya</li>
+						</ul>
+						<p class="open-text">Animation project</p>
+					</a>
+
+				</li>
+
+
+
+				<a href="sculpting/propRock.html">
+					<li class="project-card">
+						<div class="image propRock-thumbnail">
+							<iframe width="400" height="300"
+								src="https://www.youtube.com/embed/Bm-fFXTGgE0?autoplay=1&loop=1&playlist=Bm-fFXTGgE0&controls=0&disablekb=1&modestbranding=1&mute=1"
+								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							</iframe>
+						</div>
+						<h5>Environment Prop Rock</p>
+							<p class="open-text">Rock Sculpting project</p>
+					</li>
+				</a>
+				<a href="sculpting/obsidian.html">
+					<li class="project-card">
+						<div class="image obsidian-thumbnail">
+							<iframe width="400" height="300"
+								src="https://www.youtube.com/embed/y9UnP4ign4U?autoplay=1&loop=1&playlist=y9UnP4ign4U&controls=0&disablekb=1&modestbranding=1&mute=1"
+								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							</iframe>
+						</div>
+						<h5> Obsidian</p>
+							<p class="open-text">Rock Sculpting project</p>
+					</li>
+				</a>
+
+				<li class="project-card" data-category="3D">
+					<a href="sculpting/direWolf.html">
+						<div class="image direWolf-thumbnail">
+							<iframe width="400" height="300"
+								src="https://www.youtube.com/embed/Ac_aWjlY8IE?autoplay=1&loop=1&playlist=Ac_aWjlY8IE&controls=0&disablekb=1&modestbranding=1&mute=1"
+								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							</iframe>
+						</div>
+						<h5>Dire Wolf</h5>
+						<ul class="tags">
+							<li class="tag tool">Zbrush</li>
+						</ul>
+						<p class="open-text">Extinct Animal Sculpt</p>
+					</a>
+
+				</li>
+
+
+				<li class="project-card" data-category="3D">
+					<a href="sculpting/spiderLantern.html">
+						<div class="image spiderLantern-thumbnail">
+							<iframe width="400" height="300"
+								src="https://www.youtube.com/embed/C3_ghd0VWhI?autoplay=1&loop=1&playlist=C3_ghd0VWhI&controls=0&disablekb=1&modestbranding=1&mute=1"
+								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							</iframe>
+						</div>
+						<h5>Spider Lantern</h5>
+						<ul class="tags">
+							<li class="tag tool">Substance Painter</li>
+							<li class="tag tool">Maya</li>
+						</ul>
+						<p class="open-text">Environment Prop Sculpt</p>
+					</a>
+
+				</li>
+
+
+				<li class="project-card" data-category="3D">
+					<a href="sculpting/dragonDagger.html">
+						<div class="image dragonDagger-thumbnail">
+
+						</div>
+						<h5>Dragon Dagger</h5>
+						<ul class="tags">
+							<li class="tag horror">Horror</li>
+							<li class="tag gameplay">Gameplay</li>
+							<li class="tag systems">Systems</li>
+							<li class="tag tool">Unity</li>
+							<li class="tag tool">C#</li>
+						</ul>
+						<p class="open-text">Hard surface Sculpt</p>
+					</a>
+
+				</li>
+
+
+				<li class="project-card" data-category="3D">
+					<a href="sculpting/hand.html">
+						<div class="image hand"></div>
+						<h5>Hand Sculpting</h5>
+						<ul class="tags">
+							<li class="tag tool">Mudbox#</li>
+							<li class="tag tool">Maya</li>
+						</ul>
+						<p class="open-text">Anatomy Study Sculpt</p>
+					</a>
+
+				</li>
+				</a>
+
+				<li class="project-card" data-category="3D">
+					<a href="sculpting/rustyDoor.html">
+						<div class="image rustyDoor-thumbnail">
+							<iframe width="400" height="300"
+								src="https://www.youtube.com/embed/yAOj7QfKmOU?autoplay=1&loop=1&playlist=yAOj7QfKmOU&controls=0&disablekb=1&modestbranding=1&mute=1"
+								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							</iframe>
+						</div>
+						<h5>Rusty Door</h5>
+						<ul class="tags">
+							<li class="tag horror">Horror</li>
+							<li class="tag tool">Maya</li>
+							<li class="tag tool">Substance Painter</li>
+						</ul>
+						<p class="open-text">Door</p>
+					</a>
+
+				</li>
+
+
+				<li class="project-card" data-category="3D">
+					<a href="texturing/treasureChest.html">
+						<div class="image treasureChest-thumbnail">
+							<iframe width="400" height="300"
+								src="https://www.youtube.com/embed/Chl1_WbJE-E?autoplay=1&loop=1&playlist=Chl1_WbJE-E&controls=0&disablekb=1&modestbranding=1&mute=1"
+								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							</iframe>
+						</div>
+						<h5>Golden Treasure Chest</h5>
+						<ul class="tags">
+							<li class="tag horror">Horror</li>
+							<li class="tag gameplay">Gameplay</li>
+							<li class="tag systems">Systems</li>
+							<li class="tag tool">Unity</li>
+							<li class="tag tool">C#</li>
+						</ul>
+						<p class="open-text">Container Texturing</h5>
+					</a>
+
+				</li> -->
+
+
+        <!-- <li class="project-card" data-category="3D">
+					<a href="texturing/pineTree.html">
+						<div class="image pineTree-thumbnail">
+							 <iframe width="400" height="300"
+								src="https://www.youtube.com/embed/fHglO-VFhcw?autoplay=1&loop=1&playlist=fHglO-VFhcw&controls=0&disablekb=1&modestbranding=1&mute=1"
+								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							</iframe> 
+						</div>
+						<h5>Pine Tree</h5>
+						<ul class="tags">
+							<li class="tag horror">Horror</li>
+							<li class="tag gameplay">Gameplay</li>
+							<li class="tag systems">Systems</li>
+							<li class="tag tool">Unity</li>
+							<li class="tag tool">C#</li>
+						</ul>
+						<p class="open-text">Organic Vegetation Texturing</p>
+					</a>
+
+				</li> -->
+
+
+        <!-- <li class="project-card" data-category="3D">
+					<a href="texturing/shack.html">
+						<div class="image">
+							<iframe width="400" height="300"
+								src="https://www.youtube.com/embed/75Rbet1hpQg?autoplay=1&loop=1&playlist=75Rbet1hpQg&controls=0&disablekb=1&modestbranding=1&mute=1"
+								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							</iframe>
+						</div>
+						<h5>Shack</h5>
+						<ul class="tags">
+							<li class="tag horror">Horror</li>
+							<li class="tag gameplay">Gameplay</li>
+							<li class="tag systems">Systems</li>
+							<li class="tag tool">Unity</li>
+							<li class="tag tool">C#</li>
+						</ul>
+						<p class="open-text">House Texturing</p>
+					</a>
+
+				</li> -->
+
+
+
+        <!-- <a href="texturing/witchShackEnvi.html">
+					<li class="project-card">
+						<div class="image witchShackEnvi-thumbnail">
+							 <iframe width="400" height="300"
+								src="https://www.youtube.com/embed/A-5rENPr3CI?autoplay=1&loop=1&playlist=A-5rENPr3CI&disablekb=1&modestbranding=1&mute=1"
+								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							</iframe> 
+						</div>
+						<h5>Witch Shack Environment</h5>
+						<p class="open-text">Environment Texturing Project</p>
+					</li>
+				</a> -->
+
+
+
+
+
+
+        <!-- <a href="animation/ChloeAnimation.html">
+					<li class="project-card">
+						<div class="image ChloeAnimation-thumbnail">
+							<iframe width="400" height="300"
+								src="https://www.youtube.com/embed/W87o5CrnWZs?autoplay=1&loop=1&playlist=W87o5CrnWZs&controls=0&disablekb=1&modestbranding=1&mute=1"
+								title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							</iframe>
+						</div>
+						<h5>Chloe Saves The Day</p>
+						<p class="open-text">Animation project</p>
+					</li>
+				</a> 
+
+				<li class="project-card" data-category="web">
+					<a href="faqProject/faqProject.html">
+						<h5>FAQ Project</h5>
+						<ul class="tags">
+							<li class="tag tool">html</li>
+							<li class="tag tool">css</li>
+							<li class="tag tool">js</li>
+						</ul>
+						<p class="open-text">Design FAQ for Chess Club</p>
+					</a>
+					<div class="image faq"></div>
+
+				</li>
+
+
+				<li class="project-card" data-category="3D">
+					<a href="pulleyTower/pulleyTower.html">
+						<div class="image pulley-tower"></div>
+						<h5>Pulley Tower</h5>
+						<ul class="tags">
+							<li class="tag atmospheric">Atmospheric</li>
+							<li class="tag tool">Maya</li>
+						</ul>
+						<p class="open-text">3D model Pulley Tower</p>
+					</a>
+
+				</li>
+
+				 <a href="foodCart/foodCart.html">
+					<li class="project-card">
+						<div class="image food-cart"></div>
+						<h5>Food Cart</h5>
+						<p class="open-text">3D model a Food Cart</p>
+					</li>
+				</a> 
+
+				<li class="project-card" data-category="game">
+					<a href="fnaf/fnaf.html">
+						<div class="image fnaf"></div>
+						<h5>Five Nights at Freddy's</h5>
+						<ul class="tags">
+							<li class="tag horror">Horror</li>
+							<li class="tag gameplay">System</li>
+							<li class="tag tool">tabletop</li>
+						</ul>
+						<p class="open-text">A translation to board game</p>
+					</a>
+
+				</li>
+				<li class="project-card" data-category="web">
+					<a href="podcast/podcast.html">
+						<div class="image podcast"></div>
+						<h5>Podcast</h5>
+						<ul class="tags">
+							<li class="tag gameplay">Voice over</li>
+							<li class="tag tool">Premier Pro</li>
+						</ul>
+						<p class="open-text">Studying abroad experiences</p>
+					</a>
+
+				</li>
+
+				<li class="project-card" data-category="web">
+					<a href="photography/photography.html">
+						<div class="image food-photography"></div>
+						<h5>Food photography</h5>
+						<ul class="tags">
+
+						</ul>
+						<p class="open-text">Each layer is a story</p>
+					</a>
+
+				</li>-->
+
+
+      </ul>
+    </div>
+
+
+  </article>
+
+  <script>
+    fetch("nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+
+        const current = window.location.pathname;
+
+        document.querySelectorAll("#navigation a").forEach(link => {
+          if (link.pathname === current) {
+            link.classList.add("active");
+          }
+        });
+      });
+  </script>
+
+</body>
+
+</html>
+<!--Citations 
+"phone", fontawesome.com, https://fontawesome.com/icons/phone?f=classic&s=solid
+"envelope", fontawesome.com, https://fontawesome.com/v5/icons/envelope?f=classic&s=solid
+"How TO- Mobile Navigation Menu", w3schools, https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+
+-->
